@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f5f6;
+    height: auto;
+}
+
+
+
+/* hallo start */
+
+.hello {
+    height: 88px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user {
+    width: auto;
+    height: 100px;
+    margin: 10px 0 0 20px;
+}
+
+.user img {
+    width: 38px;
+    height: 38px;
+}
+
+.user span.name,
+.user span.name b i,
+.user span.name small {
+    margin-left: 10px;
+    line-height: 38px;
+    vertical-align: top;
+    color: #37474F;
+}
+
+.user span b i {
+    color: #0DABFA;
+}
+
+.user p {
+    padding-left: 48px;
+    color: #767676;
+    font-size: 1em;
+    /* margin-top: 5px; */
+}
+
+.user a {
+    color: rgb(255, 0, 0);
+}
+
+
+
+/* hello enf */
+
+
+/* centext start */
+
+#content {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+#content .content {
+    width: 50%;
+    height: 335px;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.left {
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    margin-right: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+}
+
+.right {
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    margin-left: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+}
+
+@media screen and (max-width: 1000px) {
+    #content .content {
+        width: 100%;
+    }
+    .left,.right {
+        margin: 0px;
+    }
+}
+
+.content header {
+    width: 100%;
+    height: 52px;
+    border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+.content header div {
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+}
+
+.content .one header div {
+    background: url(../images/file_1.svg) no-repeat center center;
+    background-size: 22px;
+}
+
+.content .two header div {
+    background: url(../images/flag_1.svg) no-repeat center center;
+    background-size: 22px;
+}
+
+.content .three header div {
+    background: url(../images/icon_1.svg) no-repeat center center;
+    background-size: 22px;
+}
+
+.content .four header div {
+    background: url(../images/news.svg) no-repeat center center;
+    background-size: 22px;
+}
+
+.content header h2 {
+    display: inline-block;
+    line-height: 52px;
+    vertical-align: top;
+    font-size: 22px;
+    color: rgb(55, 71, 79);
+}
+
+.table {
+    height: 100%;
+    margin: 0 10px;
+}
+
+table {
+    width: 100%;
+    height: auto;
+    text-align: left;
+}
+
+table tr {
+    height: 44px;
+    line-height: 44px;
+    box-shadow: 0 1px 1px rgb(234, 234, 234);
+}
+
+table a {
+    display: inline-block;
+    background: red;
+    width: 100%;
+    height: 44px;
+}

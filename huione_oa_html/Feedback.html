@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+	<head>
+		<title>Document</title>
+		<meta charset="UTF-8">
+		<!-- 编码格式 -->
+		<meta name="renderer" content="webkit">
+		<!-- 浏览器优先使用谷歌内核 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- 自适应布局 -->
+		<meta http-equiv="X-UA-Compatible" content="ie=edge,Chrome=1">
+		<!-- 邮箱使用最新版Ie或Chrome -->
+		<meta name="keywords" content="">
+		<!-- 关键词 -->
+		<meta name="description" content="your description">
+		<!-- 描述 -->
+		<!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/content.css">
+		<link rel="stylesheet" type="text/css" href="css/Feedback.css">
+		<!-- ico图片 -->
+		<style></style>
+	</head>
+	<body>
+		<div id="left">
+			<header>
+				<h2>意见反馈</h2>
+			</header>
+			<div class="content">
+				<form action="#" enctype="application/x-www-form-urlencoded" method="post" required>
+					<div class="feedback_type sele">
+						<span><label for="">反馈类型<i>*</i></label></span>
+						<select>
+							<option value="volvo">Volvo</option>
+							<option value="saab">Saab</option>
+							<option value="opel">Opel</option>
+							<option value="audi">Audi</option>
+						</select>
+					</div>
+					<div class="feedback_text sele">
+						<span><label for="">意见描述<i>*</i></label></span>
+						<input type="text" name="feedback_text" id="feedback_text" autocomplete="on" required>
+					</div>
+					<span class="radio sele">
+						<input type="radio" name="sex" value="匿名反馈" checked>&nbsp;&nbsp;匿名反馈&nbsp;&nbsp;
+						<input type="radio" name="sex" value="实名反馈">&nbsp;&nbsp;实名反馈
+					</span>
+					<div class="button">
+						<button type="submit" name="modify_info" id="modify_info">发布</button>
+					</div>
+				</form>
+				<p>集团规定：<br>
+					1、<br>
+					2、<br>
+					3、<br>
+					投诉邮箱：10@huione.com <br>
+				投诉电话：+855-123456789</p>
+			</div>
+		</div>
+		<aside id="task">
+			<header>
+				<h2>待完成任务</h2>
+			</header>
+			<div class="no_content content">
+				<p class="no_content">暂时没有未完成任务</p>
+			</div>
+		</aside>
+	</body>
+</html>

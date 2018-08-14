@@ -1,0 +1,407 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(244, 245, 246);
+    overflow: hidden;
+    position: relative;
+}
+
+
+/* header start */
+
+header {
+    width: 100%;
+    height: 52px;
+    background-color: rgb(13, 171, 250);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    line-height: 52px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.logo {
+    display: inline-block;
+    width: 260px;
+    height: 52px;
+    background: url(../images/logo.svg) no-repeat center center;
+    background-size: 138px 38px;
+}
+
+.wed_menu {
+    width: 52px;
+    height: 52px;
+    background: url(../images/menu.svg) no-repeat center center;
+    border: none;
+}
+
+div.user {
+    width: 180px;
+    height: auto;
+    margin-right: 10px;
+    position: relative;
+}
+
+div.user div {
+    width: 130px;
+    height: auto;
+}
+
+div.user div button {
+    width: 130px;
+    height: 52px;
+    border: none;
+    background: none;
+    position: absolute;
+}
+
+div.user img {
+    width: 24px;
+    height: 24px;
+    padding: 14px 5px 14px 0px;
+}
+
+div.user span {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    line-height: 52px;
+    vertical-align: top;
+    margin-left: 5px;
+}
+
+div.user button.drop_out {
+    border: none;
+    width: 52px;
+    height: 52px;
+    background: url(../images/log_in.svg) no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 130px;
+}
+
+.user .user_content {
+    display: none;
+}
+
+div.user div:hover ul {
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    top: 52px;
+}
+
+.user li {
+    width: 100%;
+    height: 52px;
+    padding-left: 10px;
+}
+
+.user li a {
+    color: rgb(55, 71, 79);
+}
+
+@media screen and (min-width: 800px) {
+    .pone {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .pone{
+        display: block;
+        position: relative;
+    }
+    .menu_button {
+        display: block;
+        width: 52px;
+        height: 52px;
+        background: url(../images/pone_menu.svg) no-repeat center center;
+        border: none;
+        float: left;
+    }
+    .pone_menu{
+        display: none;
+        background-color: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 52px;
+        left: 0;
+    }
+    .pone_menu li{
+        width: 100%;
+        height: auto;
+        position: relative;
+        background-color: rgba(13, 171, 250,1);
+        color: rgb(89, 89, 89);
+        text-align: center;
+    }
+    .pone_menu li h6{
+        line-height: 52px;
+        color: rgb(255, 255, 255);
+        font-size: 22px;
+    }
+    .pone_menu li img.icon{
+        width: 14px;
+        position: absolute;
+        top: 19px;
+        left: 20px;
+    }
+    .pone_menu li img.open{
+        width: 10px;
+        position: absolute;
+        top: 21px;
+        left: 100%;
+        margin-left: -30px;
+    }
+    .pone:hover .pone_menu {
+        display: inline-block;
+    }
+    .wed_menu {
+        display: none;
+    }
+    .pone_menu ul.hide{
+        display: none;
+    }
+    div.user {
+        width: 52px;
+        height: auto;
+        margin-right: 10px;
+        position: relative;
+    }
+    div.user span,
+    div.user button.drop_out {
+        display: none;
+    }
+    div.user div button {
+        width: 52px;
+    }
+    div.user div ul.user_content {
+        position: absolute;
+        width: 120px;
+        left: -58px;
+    }
+    .logo {
+        position: absolute;
+        left: 50%;
+        margin-left: -130px;
+    }
+}
+
+
+
+
+
+
+/* header end */
+
+
+/* menu start*/
+
+#menu {
+    width: 260px;
+    height: 100vh;
+    background-color: rgb(55, 71, 79);
+    position: relative;
+    left: 0;
+    z-index: 0;
+    overflow: auto;
+    float: left;
+}
+
+
+
+
+/* 设置滚动条的样式 */
+
+#menu::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+
+
+/* search start */
+
+#menu form {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    height: 32px;
+    margin: 20px 15px;
+    position: relative;
+}
+
+#menu form .search_text {
+    width: 100%;
+    height: 32px;
+    border: none;
+    background: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+}
+
+#menu form .search_button {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: url(../images/search.svg) no-repeat center center;
+    top: 0;
+    left: 100%;
+    margin-left: -32px;
+}
+
+#menu .menu {
+    width: 260px;
+    height: auto;
+    margin-top: 50px;
+}
+
+.menu ul.hide {
+    display: none;
+}
+
+.menu li {
+    width: 260px;
+    height: auto;
+    font-size: 0;
+    position: relative;
+    float: left;
+}
+
+.menu li h6 {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    line-height: 52px;
+    left: 56px;
+    top: 0;
+}
+
+.menu img.icon {
+    width: 16px;
+    height: 16px;
+    margin: 18px 10px;
+}
+
+.menu img.open {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 20px;
+    left: 100%;
+    margin-left: -27px;
+}
+
+.menu a {
+    display: inline-block;
+    width: 260px;
+    height: 52px;
+}
+
+.menu li:hover,
+.menu li.sele {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu li:hover h6,
+.menu li.sele h6 {
+    color: rgb(255, 255, 255)
+}
+
+.copy {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 32px;
+    margin-top: -104px;
+    text-align: center;
+}
+
+.copy p {
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.4)
+}
+
+
+@media screen and (max-width: 800px) {
+    #menu {
+        display: none;
+    }
+}
+
+
+
+
+/* menu end */
+
+
+/* content start */
+
+#content {
+    height: 100vh;
+    margin-left: 260px;
+    margin-top: 52px;
+}
+
+#content .content_tab {
+    width: 100%;
+    height: 32px;
+    background-color: rgb(255, 255, 255);
+}
+
+#content .content_tab li {
+    width: 200px;
+    height: 32px;
+    display: inline-block;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    color: rgb(55, 71, 79);
+    position: relative;
+    font-size: 0;
+}
+
+.content_tab li h1 {
+    font-size: 14px;
+}
+
+.content_tab li button {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    border: none;
+    background: url(../images/close.svg) no-repeat center center;
+    background-size: 10px;
+    left: 100%;
+    margin-left: -32px;
+    display: none;
+}
+
+#content .content_tab li.sele {
+    background: rgb(244, 245, 246);
+}
+
+.content_tab li:hover button,
+.content_tab li.sele button {
+    display: inline-block;
+    top: 0;
+}
+
+#content .content_content {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 800px) {
+    #content {
+        margin-left: 0px;
+    }
+    .content_tab {
+        display: none;
+    }
+}

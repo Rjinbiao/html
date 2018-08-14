@@ -1,0 +1,176 @@
+header {
+    position: relative;
+
+    width: auto;
+    height: 70px;
+}
+
+form {
+    line-height: 50px;
+
+    position: relative;
+
+    width: auto;
+    height: auto;
+}
+
+form input,
+select {
+    font-size: 14px;
+
+    float: left;
+
+    width: 180px;
+    height: 50px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+
+    text-indent: 2em;
+
+    color: rgb(149, 152, 154);
+    border: none;
+    border-bottom: 1px solid rgb(149, 152, 154);
+    border-radius: 0;
+    background: none;
+    background: url(../images/flag_1.svg) no-repeat left center;
+    background-size: 18px;
+}
+
+input[type=submit] {
+    font-size: 16px;
+
+    width: 120px;
+    height: 50px;
+
+    text-align: center;
+    text-indent: 0;
+
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: rgb(23, 185, 198);
+    background-image: none;
+}
+
+div.button {
+    width: auto;
+    height: 50px;
+}
+
+div.button a {
+    font-size: 16px;
+    line-height: 50px;
+
+    display: inline-block;
+
+    width: 180px;
+    height: 50px;
+
+    text-align: center;
+    text-indent: 0;
+
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: rgb(51, 140, 221);
+    background-image: none;
+}
+
+@media screen and (max-width: 800px) {
+    header {
+        display: none;
+    }
+}
+
+
+/* table start */
+.table{
+	padding: 20px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+
+}
+
+table#miyazaki caption {
+    font-size: 1rem;
+	text-align: left;
+    margin: 1rem;
+
+    color: #444;
+}
+
+table#miyazaki {
+	width: 100%;
+    font-family: Agenda-Light;
+    font-weight: 100;
+
+    border-collapse: collapse;
+
+    color: rgb(85, 85, 85);
+    border-radius: 5px;
+    border-color: rgb(234, 234, 234);
+    background: rgb(250, 252, 253);
+
+    text-rendering: optimizeLegibility;
+}
+
+table#miyazaki thead th {
+    font-weight: 600;
+    text-align: left;
+    background-color: rgb(205, 217, 222)
+}
+
+table#miyazaki thead th,
+table#miyazaki tbody td {
+    font-size: .8rem;
+
+    padding: .8rem;
+}
+
+table#miyazaki tbody td {
+    font-size: .8rem;
+
+    padding: .8rem;
+
+    color: rgb(55, 71, 79);
+    /* background: rgb(255, 255, 255); */
+}
+
+table#miyazaki tbody tr:not(:last-child) {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+table#miyazaki tbody tr{
+	background-color: rgba(255, 255, 255, 1.0)
+}
+table#miyazaki tbody tr:nth-child(2n){
+	background-color: rgba(57, 207, 219, 0.1)
+}
+table#miyazaki tbody tr:hover{
+	background-color: rgba(57, 207, 219, 0.4)
+}
+
+@media screen and (max-width: 600px) {
+    table#miyazaki caption {
+        background-image: none;
+    }
+    table#miyazaki thead {
+        display: none;
+    }
+    table#miyazaki tbody td {
+        display: block;
+
+        padding: .6rem;
+    }
+    table#miyazaki tbody tr td:first-child {
+        color: #fff;
+        background: #333;
+    }
+    table#miyazaki tbody td:before {
+        font-weight: bold;
+
+        display: inline-block;
+
+        width: 6rem;
+
+        content: attr(data-th);
+    }
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>我的任务</title>
+    <meta charset="UTF-8">
+    <!-- 编码格式 -->
+    <meta name="renderer" content="webkit">
+    <!-- 浏览器优先使用谷歌内核 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 自适应布局 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,Chrome=1">
+    <!-- 邮箱使用最新版Ie或Chrome -->
+    <meta name="keywords" content="">
+    <!-- 关键词 -->
+    <meta name="description" content="your description">
+    <!-- 描述 -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
+    <!-- ico图片 -->
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/task.css">
+    <link rel="stylesheet" type="text/css" href="css/table.css">
+    <style></style>
+	<script type="text/javascript">
+		function addCell(){
+                var tb = document.getElementsByTagName("table")[0];
+                var len = tb.rows.length;
+                for (var i = 1; i < len; i++) {
+                    var cell = tb.rows[i].insertCell(0);
+                    cell.innerHTML = i + 0;
+                }
+            }
+	</script>
+
+</head>
+
+<body onload="addCell()">
+    <header>
+        <form class="inquire fl" action="#" enctype="application/x-www-form-urlencoded" method="post">
+            <input type="text" name="project_name" class="project_name" id="project_name" value="项目名称">
+            <select name="cars" id="cars" class="cars" value="项目类型">
+                <option value="volvo">项目类型</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+            <input type="text" name="principal" class="principal" id="principal" value="负责人">
+            <input type="date" name="date" class="date" id="date" value="创建日期">
+            <input type="submit" name="submit" class="submit" id="submit" value="查询">
+        </form>
+        <div class="button fr">
+            <a href="Newtask.html">添加任务</a>
+        </div>
+    </header>
+    <div class="clear"></div>
+    <div class="table">
+        <table id="miyazaki" border="1">
+            <thead>
+                <tr>
+                    <th>项目编号</th>
+                    <th>项目名称</th>
+                    <th>负责人</th>
+                    <th>创建时间</th>
+                    <th>项目状态</th>
+                    <th>操作</th>
+                </tr>
+                <tbody>
+                    <tr>
+
+                        <td>Blue Ribbon Award (Special)</td>
+                        <td>Blue</td>
+                        <td>2018-08-05 12:00:00</td>
+                        <td>施工中</td>
+                        <td>
+                            <button></button>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td>Blue Ribbon Award (Special)</td>
+                        <td>Blue</td>
+                        <td>2018-08-05 12:00:00</td>
+                        <td>施工中</td>
+                        <td>
+                            <button></button>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td>Blue Ribbon Award (Special)</td>
+                        <td>Blue</td>
+                        <td>2018-08-05 12:00:00</td>
+                        <td>施工中</td>
+                        <td>
+                            <button></button>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td>Blue Ribbon Award (Special)</td>
+                        <td>Blue</td>
+                        <td>2018-08-05 12:00:00</td>
+                        <td>施工中</td>
+                        <td>
+                            <button></button>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td>Blue Ribbon Award (Special)</td>
+                        <td>Blue</td>
+                        <td>2018-08-05 12:00:00</td>
+                        <td>施工中</td>
+                        <td>
+                            <button></button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+        </table>
+        <!-- <script>
+        var headertext = [];
+        var headers = document.querySelectorAll("#miyazaki th"),
+            tablerows = document.querySelectorAll("#miyazaki th"),
+            tablebody = document.querySelector("#miyazaki tbody");
+        for (var i = 0; i < headers.length; i++) {
+            var current = headers[i];
+            headertext.push(current.textContent.replace(/\r?\n|\r/, ""));
+        }
+        for (var i = 0, row; row = tablebody.rows[i]; i++) {
+            for (var j = 0, col; col = row.cells[j]; j++) {
+                col.setAttribute("data-th", headertext[j]);
+            }
+        }
+        </script> -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <!-- 编码格式 -->
+    <meta name="renderer" content="webkit">
+    <!-- 浏览器优先使用谷歌内核 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 自适应布局 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,Chrome=1">
+    <!-- 邮箱使用最新版Ie或Chrome -->
+    <meta name="keywords" content="">
+    <!-- 关键词 -->
+    <meta name="description" content="your description">
+    <!-- 描述 -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- ico图片 -->
+    <link rel="stylesheet" type="text/css" href="css/public.css">
+    <link rel="stylesheet" type="text/css" href="css/content.css">
+    <link rel="stylesheet" type="text/css" href="css/user.css">
+    <style></style>
+</head>
+
+<body>
+    <div id="left">
+        <header>
+            <h2>个人信息</h2>
+        </header>
+        <div class="content">
+            <form action="#" enctype="application/x-www-form-urlencoded" method="post">
+                <div class="user_name sele">
+                    <span><label for="">姓名</label></span>
+                    <input type="text" name="user_name" id="user_name" placeholder="王小二" autocomplete="on">
+                </div>
+                <div class="job_number sele">
+                    <span><label for="">工号</label></span>
+                    <input type="number" name="job_number" id="job_number" placeholder="12009" disabled autocomplete="on">
+                </div>
+                <div class="email sele">
+                    <span><label for="">邮箱</label></span>
+                    <input type="email" name="email" id="email" placeholder="12009@huione.con"  autocomplete="on">
+                </div>
+                <div class="pone_number sele">
+                    <span><label for="">手机号</label></span>
+                    <input type="number" name="pone_number" id="pone_number" placeholder="968633993" disabled autocomplete="on">
+                </div>
+                <div class="account sele">
+                    <span><label for="">Huione Pay 账号</label></span>
+                    <input type="number" name="account" id="account" disabled autocomplete="on">
+                </div>
+                <div class="password sele">
+                    <span><label for="">密码</label></span>
+                    <input type="password" name="password" id="password" disabled autocomplete="off">
+                </div>
+                <div class="button">
+                    <button type="button" name="modify_info" id="modify_info">修改个人信息</button>
+                    <button type="button" name="modify_password" id="modify_password">修改登录密码</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <aside id="task">
+        <header>
+            <h2>待完成任务</h2>
+        </header>
+        <div class="content">
+            <p class="no_content">暂时没有未完成任务</p>
+            <ul>
+                <li>
+                    <header>
+                        <span class="task_name">软件部门-团建</span>
+                        <small class="fr">截止时间：<time>2018-08-15</time></small>
+                    </header>
+                    <p>在开始打开 $EDITOR（编辑器） 之前进行小小的思考不是坏事。为了给一个系统…</p>
+                    <div class="footer">
+                        <a href="#">任务详情</a>
+                    </div>
+                </li>
+                <li>
+                    <header>
+                        <span class="task_name">软件部门-团建</span>
+                        <small class="fr">截止时间：<time>2018-08-15</time></small>
+                    </header>
+                    <p>在开始打开 $EDITOR（编辑器） 之前进行小小的思考不是坏事。为了给一个系统…</p>
+                    <div class="footer">
+                        <a href="#">任务详情</a>
+                    </div>
+                </li>
+                <li>
+                    <header>
+                        <span class="task_name">软件部门-团建</span>
+                        <small class="fr">截止时间：<time>2018-08-15</time></small>
+                    </header>
+                    <p>在开始打开 $EDITOR（编辑器） 之前进行小小的思考不是坏事。为了给一个系统…</p>
+                    <div class="footer">
+                        <a href="#">任务详情</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </aside>
+</body>
+
+</html>

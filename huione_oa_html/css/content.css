@@ -1,0 +1,84 @@
+/* 页面主体 */
+
+body {
+    position: relative;
+
+    height: auto;
+    margin: 0;
+    padding: 20px;
+
+    background-color: rgb(244, 245, 246);
+}
+
+
+/* 页面布局 */
+
+div#left {
+    height: auto;
+    margin-right: 420px;
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+}
+
+aside#task {
+    position: fixed;
+    top: 20px;
+    left: 100%;
+
+    width: 400px;
+    height: auto;
+    margin-left: -420px;
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .15);
+}
+
+@media screen and (max-width: 1250px) {
+    aside#task {
+        display: none;
+    }
+    div#left {
+        margin-right: 0;
+    }
+}
+/*#left header start */
+
+header
+{
+    width: 100%;
+    height: 52px;
+
+    border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+header h2
+{
+    font-size: 22px;
+    line-height: 52px;
+
+    display: inline-block;
+
+    margin-left: 20px;
+
+    vertical-align: top;
+
+    color: rgb(55, 71, 79);
+}
+#task div p.no_content{
+    display: none;
+}
+#task div.no_content ul{
+    display: none;
+}
+#task div.no_content{
+    width: 100%;
+    height: 500px;
+    background: url(../images/task_bg.png) no-repeat center center; 
+}
+#task div.no_content p.no_content{
+    display: block;
+    text-align: center;
+    padding-top: 320px;
+    color: rgb(190, 190, 190)
+}
