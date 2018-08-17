@@ -23,15 +23,23 @@
     <script type="text/javascript">
         window.onload = function() {
             var oUl = document.getElementById("pone_menu_context");
-            oUl.style.height = (window.innerHeight-52)+'px';
+            var oDiv = document.getElementById("menu");
+            var oDiv2 = document.getElementById("content");
+
+            oUl.style.height = (window.innerHeight - 52) + 'px';
+            oDiv.style.height = (window.innerHeight - 52) + 'px';
+            oDiv2.style.height = (window.innerHeight - 52) + 'px';
         }
     </script>
 </head>
 
 <body>
+    <!-- header start -->
     <header>
+        <!-- pone_menu start -->
         <div class="pone_menu">
-            <a href="#"></a>
+            <button id="icon_off" onclick="on()"></button>
+            <button id="icon_on" onclick="off()"></button>
             <ul id="pone_menu_context">
                 <li>
                     <a href="#" class="home ption" target="">首页</a>
@@ -80,7 +88,27 @@
                     <a href="#" class="feedback ption" target="">意见反馈</a>
                 </li>
             </ul>
+            <script>
+                function on() {
+                    var oFf = document.getElementById('icon_off');
+                    var oOn = document.getElementById('icon_on');
+                    var oUl = document.getElementById('pone_menu_context')
 
+                    oFf.style.display = 'none';
+                    oOn.style.display = 'block';
+                    oUl.style.display = 'block';
+                }
+
+                function off() {
+                    var oFf = document.getElementById('icon_off');
+                    var oOn = document.getElementById('icon_on');
+                    var oUl = document.getElementById('pone_menu_context')
+
+                    oFf.style.display = 'block';
+                    oOn.style.display = 'none';
+                    oUl.style.display = 'none';
+                }
+            </script>
         </div>
         <div class="logo"></div>
         <div class="web_menu_small"></div>
@@ -93,6 +121,144 @@
             </ul>
         </div>
     </header>
+    <!-- header end -->
+    <!-- menu start -->
+    <div id="menu">
+        <form class="search" action="#" method="get" name="form">
+            <input type="text" name="search" value="search" id="search">
+            <input type="submit" name="submit" id="submit" value="">
+        </form>
+        <!-- menu start -->
+        <ul class="menu">
+            <li class="sele">
+                <a href="home.html" target="MyContent" class="option">
+                        <img src="images/air-play.svg" alt="" class="icon">
+                        <h6>首页</h6>
+                    </a>
+            </li>
+            <li>
+                <a href="user.html" target="MyContent" class="option">
+                        <img src="images/user.svg" alt="" class="icon">
+                        <h6>个人信息</h6>
+                    </a>
+            </li>
+            <li>
+                <img src="images/flag.svg" alt="" class="icon">
+                <h6>任务管理</h6>
+                <img src="images/more.svg" class="open">
+                <ul class="hide">
+                    <li>
+                        <a href="Newtask.html" target="MyContent" class="option">
+                            <h6>新增任务</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="task.html" target="MyContent" class="option">
+                            <h6>我的任务</h6>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img src="images/clock.svg" alt="" class="icon">
+                <h6>人事&amp;考勤</h6>
+                <img src="images/more.svg" class="open">
+                <ul class="hide">
+                    <li>
+                        <a href="menu.html" target="MyContent" class="option">
+                            <h6>请假申请</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menu.html" target="MyContent" class="option">
+                            <h6>出差申请</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menu.html" target="MyContent" class="option">
+                            <h6>我的申请</h6>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img src="images/pie_graph.svg" alt="" class="icon">
+                <h6>财务&报销</h6>
+                <img src="images/more.svg" class="open">
+                <ul class="hide">
+                    <li>
+                        <a href="menu.html" target="MyContent" class="option">
+                            <h6>报销</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menu.html" target="MyContent" class="option">
+                            <h6>借款</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menu.html" target="MyContent" class="option">
+                            <h6>我的申请</h6>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img src="images/paper.svg" alt="" class="icon">
+                <h6>我的报表</h6>
+                <img src="images/more.svg" class="open">
+                <ul class="hide">
+                    <li>
+                        <a href="menu.html" target="MyContent" class="option">
+                            <h6>我的报表1</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menu.html" target="MyContent" class="option">
+                            <h6>我的报表2</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menu.html" target="MyContent" class="option">
+                            <h6>我的报表3</h6>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <img src="images/file.svg" alt="" class="icon">
+                <h6>公告管理</h6>
+                <img src="images/more.svg" class="open">
+                <ul class="hide">
+                    <li>
+                        <a href="menu.html" target="MyContent" class="option">
+                            <h6>新增公告</h6>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menu.html" target="MyContent" class="option">
+                            <h6>公告历史</h6>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="Feedback.html" target="MyContent" class="option">
+                        <img src="images/mail.svg" alt="" class="icon">
+                        <h6>意见反馈</h6>
+                    </a>
+            </li>
+        </ul>
+        <!-- footer start -->
+        <footer class="copy">
+            <p><small>&copy;2018&nbsp;汇旺集团</small></p>
+        </footer>
+    </div>
+    <!-- menu end -->
+    <!-- content start -->
+    <div id="content">
+        222
+    </div>
 </body>
 
 </html>

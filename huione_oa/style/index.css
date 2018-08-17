@@ -19,6 +19,8 @@ header {
     background-color: rgba(0, 85, 204, 1);
     box-shadow: 0 0 10px rgba(0, 85, 204, 0.15);
     z-index: 999;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255,255,255,0.15)
 }
 
 .pone_menu {
@@ -71,7 +73,7 @@ header {
 }
 
 .user_name span {
-    font-size: 14px;
+    font-size: 1em;
     font-family: Arial;
 }
 
@@ -90,6 +92,15 @@ header {
     text-indent: 10px;
 }
 
+.user_content li a {
+    font-size: 0.8em;
+    color: rgb(55, 71, 79);
+}
+
+.user:hover .user_content {
+    display: block;
+}
+
 @media screen and (max-width: 800px) {
     .pone_menu {
         display: block;
@@ -99,15 +110,20 @@ header {
         width: 100%;
         height: auto;
     }
-    .pone_menu>a {
+    #icon_off, #icon_on {
         width: 52px;
         height: 52px;
         position: absolute;
         top: 0;
         left: 0;
         background: url(../images/pone_menu.svg) no-repeat center center;
+        border: none;
+    }
+    #icon_on {
+        display: none;
     }
     .pone_menu>ul {
+        display: none;
         width: 100%;
         height: 100vh;
         position: absolute;
@@ -124,18 +140,17 @@ header {
         height: auto;
         line-height: 52px;
         text-align: center;
-        background-color: rgb(255, 255, 255);
+        /* background-color: rgb(255, 255, 255); */
         border-bottom: 1px solid rgb(234, 234, 234);
-        background:rgb(255, 255, 255)
-         url(../images/file.svg) no-repeat;
+        background: rgb(255, 255, 255);
     }
     .pone_menu li ul {
         display: none;
         border-bottom: 1px solid rgb(234, 234, 234)
     }
-    .pone_menu li>ul>li>a{
-        background-color: rgb(250,250,250);
-        border:none;
+    .pone_menu li>ul>li>a {
+        background-color: rgb(250, 250, 250);
+        border: none;
     }
     .logo {
         top: 0;
@@ -160,4 +175,63 @@ header {
     .user_name span {
         display: none;
     }
+}
+
+/* header end */
+
+/* menu start */
+#menu{
+    position: absolute;
+    top: 52px;
+    left: 0;
+    background-color: rgba(55,71,79,1);
+    width: 260px;
+    height: 100%;
+}
+#menu form{
+    margin: 20px 15px;
+    border: 1px solid rgba(255,255,255,0.4);
+    position: relative;
+    height: 30px;
+}
+
+form #search{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    background: none;
+    color: rgb(255,255,255);
+    font-family: Arial;
+    font-size: 1em;
+}
+
+form #submit{
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: url(../images/search.svg) no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: -32px;
+}
+#menu .menu{
+    width: 100%;
+    height: auto;
+}
+.menu *{
+    color: rgb(255,255,255)
+}
+.menu img.icon{
+    width: 22px;
+}
+
+
+
+
+/* content start */
+#content{
+    margin-left: 260px;
+    padding-top: 52px;
 }
