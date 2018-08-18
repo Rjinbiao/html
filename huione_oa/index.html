@@ -19,18 +19,21 @@
     <!-- ico图片 -->
     <link rel="stylesheet" href="style/public.css">
     <link rel="stylesheet" href="style/index.css">
-
     <script type="text/javascript">
-        window.onload = function() {
-            var oUl = document.getElementById("pone_menu_context");
-            var oDiv = document.getElementById("menu");
-            var oDiv2 = document.getElementById("content");
+    window.onload = function() {
+        var oUl = document.getElementById("pone_menu_context");
+        var oDiv = document.getElementById("menu");
+        var oDiv2 = document.getElementById("content");
 
-            oUl.style.height = (window.innerHeight - 52) + 'px';
-            oDiv.style.height = (window.innerHeight - 52) + 'px';
-            oDiv2.style.height = (window.innerHeight - 52) + 'px';
-        }
+        oUl.style.height = (window.innerHeight - 52) + 'px';
+        oDiv.style.height = (window.innerHeight - 122) + 'px';
+        oDiv2.style.height = (window.innerHeight - 52) + 'px';
+        oDiv2.style.width = (window.innerWidth - 260) + 'px';
+
+
+    }
     </script>
+    <link rel="stylesheet" href="js/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css">
 </head>
 
 <body>
@@ -48,38 +51,38 @@
                     <a href="#" class="user_info ption" target="">个人信息</a>
                 </li>
                 <li>
-                    <a href="#" class="task ption" target="">任务管理</a>
-                    <ul class="hide">
+                    <a href="#" onclick="$(this).parent().find('.task_task').toggle()" class="task ption" target="">任务管理</a>
+                    <ul class="task_task">
                         <li><a href="#" class="new_task ption">新增任务</a></li>
                         <li><a href="#" class="my_task ption">我的任务</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="personnel ption" target="">人事&amp;考勤</a>
-                    <ul class="hide">
+                    <a href="#" onclick="$(this).parent().find('.personnel_personnel').toggle()" class="personnel ption" target="">人事&amp;考勤</a>
+                    <ul class="personnel_personnel">
                         <li><a href="#" class="leave ption">请假申请</a></li>
                         <li><a href="#" class="travel ption">出差申请</a></li>
                         <li><a href="#" class="application ption">我的申请</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="finance ption" target="">财务&amp;报销</a>
-                    <ul class="hide">
+                    <a href="#" onclick="$(this).parent().find('.finance_finance').toggle()" class="finance ption" target="">财务&amp;报销</a>
+                    <ul class="finance_finance">
                         <li><a href="#" class="reimburse ption">报销</a></li>
                         <li><a href="#" class="loan ption">借款</a></li>
                         <li><a href="#" class="application2 ption">我的申请</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="report ption" target="">我的报表</a>
-                    <ul class="hide">
+                    <a href="#" onclick="$(this).parent().find('.report_report').toggle()" class="report ption" target="">我的报表</a>
+                    <ul class="report_report">
                         <li><a href="#" class="my_report ption">我的报表1</a></li>
                         <li><a href="#" class="my_report2 ption">我的报表2</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="post ption" target="">公告管理</a>
-                    <ul class="hide">
+                    <a href="#" onclick="$(this).parent().find('.post_post').toggle()" class="post ption" target="">公告管理</a>
+                    <ul class="post_post">
                         <li><a href="#" class="new_post ption">新增公告</a></li>
                         <li><a href="#" class="history_post ption">公告历史</a></li>
                     </ul>
@@ -89,25 +92,25 @@
                 </li>
             </ul>
             <script>
-                function on() {
-                    var oFf = document.getElementById('icon_off');
-                    var oOn = document.getElementById('icon_on');
-                    var oUl = document.getElementById('pone_menu_context')
+            function on() {
+                var oFf = document.getElementById('icon_off');
+                var oOn = document.getElementById('icon_on');
+                var oUl = document.getElementById('pone_menu_context')
 
-                    oFf.style.display = 'none';
-                    oOn.style.display = 'block';
-                    oUl.style.display = 'block';
-                }
+                oFf.style.display = 'none';
+                oOn.style.display = 'block';
+                oUl.style.display = 'block';
+            }
 
-                function off() {
-                    var oFf = document.getElementById('icon_off');
-                    var oOn = document.getElementById('icon_on');
-                    var oUl = document.getElementById('pone_menu_context')
+            function off() {
+                var oFf = document.getElementById('icon_off');
+                var oOn = document.getElementById('icon_on');
+                var oUl = document.getElementById('pone_menu_context')
 
-                    oFf.style.display = 'block';
-                    oOn.style.display = 'none';
-                    oUl.style.display = 'none';
-                }
+                oFf.style.display = 'block';
+                oOn.style.display = 'none';
+                oUl.style.display = 'none';
+            }
             </script>
         </div>
         <div class="logo"></div>
@@ -122,133 +125,92 @@
         </div>
     </header>
     <!-- header end -->
+    <form class="search" action="#" method="get" name="form">
+        <div>
+            <input type="text" name="search" value="search" id="search" form="form">
+            <input type="submit" name="submit" id="submit" value="" form="form">
+        </div>
+    </form>
     <!-- menu start -->
-    <div id="menu">
-        <form class="search" action="#" method="get" name="form">
-            <input type="text" name="search" value="search" id="search">
-            <input type="submit" name="submit" id="submit" value="">
-        </form>
+    <div id="menu" class="content mCustomScrollbar">
         <!-- menu start -->
-        <ul class="menu">
-            <li class="sele">
-                <a href="home.html" target="MyContent" class="option">
-                        <img src="images/air-play.svg" alt="" class="icon">
-                        <h6>首页</h6>
-                    </a>
+        <ul>
+            <li>
+                <a href="#" class="home ption" target="">首页</a>
             </li>
             <li>
-                <a href="user.html" target="MyContent" class="option">
-                        <img src="images/user.svg" alt="" class="icon">
-                        <h6>个人信息</h6>
-                    </a>
+                <a href="#" class="user_info ption" target="">个人信息</a>
             </li>
             <li>
-                <img src="images/flag.svg" alt="" class="icon">
-                <h6>任务管理</h6>
-                <img src="images/more.svg" class="open">
-                <ul class="hide">
-                    <li>
-                        <a href="Newtask.html" target="MyContent" class="option">
-                            <h6>新增任务</h6>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="task.html" target="MyContent" class="option">
-                            <h6>我的任务</h6>
-                        </a>
-                    </li>
+                <a href="#" onclick="$(this).parent().find('.task_task').toggle()" class="task ption" target="">任务管理</a>
+                <ul class="task_task">
+                    <li><a href="#" class="new_task ption">新增任务</a></li>
+                    <li><a href="#" class="my_task ption">我的任务</a></li>
                 </ul>
             </li>
             <li>
-                <img src="images/clock.svg" alt="" class="icon">
-                <h6>人事&amp;考勤</h6>
-                <img src="images/more.svg" class="open">
-                <ul class="hide">
-                    <li>
-                        <a href="menu.html" target="MyContent" class="option">
-                            <h6>请假申请</h6>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="menu.html" target="MyContent" class="option">
-                            <h6>出差申请</h6>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="menu.html" target="MyContent" class="option">
-                            <h6>我的申请</h6>
-                        </a>
-                    </li>
+                <a href="#" onclick="$(this).parent().find('.personnel_personnel').toggle()" class="personnel ption" target="">人事&amp;考勤</a>
+                <ul class="personnel_personnel">
+                    <li><a href="#" class="leave ption">请假申请</a></li>
+                    <li><a href="#" class="travel ption">出差申请</a></li>
+                    <li><a href="#" class="application ption">我的申请</a></li>
                 </ul>
             </li>
             <li>
-                <img src="images/pie_graph.svg" alt="" class="icon">
-                <h6>财务&报销</h6>
-                <img src="images/more.svg" class="open">
-                <ul class="hide">
-                    <li>
-                        <a href="menu.html" target="MyContent" class="option">
-                            <h6>报销</h6>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="menu.html" target="MyContent" class="option">
-                            <h6>借款</h6>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="menu.html" target="MyContent" class="option">
-                            <h6>我的申请</h6>
-                        </a>
-                    </li>
+                <a href="#" onclick="$(this).parent().find('.finance_finance').toggle()" class="finance ption" target="">财务&amp;报销</a>
+                <ul class="finance_finance">
+                    <li><a href="#" class="reimburse ption">报销</a></li>
+                    <li><a href="#" class="loan ption">借款</a></li>
+                    <li><a href="#" class="application2 ption">我的申请</a></li>
                 </ul>
             </li>
             <li>
-                <img src="images/paper.svg" alt="" class="icon">
-                <h6>我的报表</h6>
-                <img src="images/more.svg" class="open">
-                <ul class="hide">
-                    <li>
-                        <a href="menu.html" target="MyContent" class="option">
-                            <h6>我的报表1</h6>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="menu.html" target="MyContent" class="option">
-                            <h6>我的报表2</h6>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="menu.html" target="MyContent" class="option">
-                            <h6>我的报表3</h6>
-                        </a>
-                    </li>
+                <a href="#" onclick="$(this).parent().find('.report_report').toggle()" class="report ption" target="">我的报表</a>
+                <ul class="report_report">
+                    <li><a href="#" class="my_report ption">我的报表1</a></li>
+                    <li><a href="#" class="my_report2 ption">我的报表2</a></li>
                 </ul>
             </li>
             <li>
-                <img src="images/file.svg" alt="" class="icon">
-                <h6>公告管理</h6>
-                <img src="images/more.svg" class="open">
-                <ul class="hide">
-                    <li>
-                        <a href="menu.html" target="MyContent" class="option">
-                            <h6>新增公告</h6>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="menu.html" target="MyContent" class="option">
-                            <h6>公告历史</h6>
-                        </a>
-                    </li>
+                <a href="#" onclick="$(this).parent().find('.post_post').toggle()" class="post ption" target="">公告管理</a>
+                <ul class="post_post">
+                    <li><a href="#" class="new_post ption">新增公告</a></li>
+                    <li><a href="#" class="history_post ption">公告历史</a></li>
                 </ul>
             </li>
             <li>
-                <a href="Feedback.html" target="MyContent" class="option">
-                        <img src="images/mail.svg" alt="" class="icon">
-                        <h6>意见反馈</h6>
-                    </a>
+                <a href="#" class="feedback ption" target="">意见反馈</a>
             </li>
         </ul>
+        <!-- Google CDN jQuery with fallback to local -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+        window.jQuery || document.write('<script src="js/malihu-custom-scrollbar-plugin-master/js/minified/jquery-1.11.0.min.js"><\/script>')
+        </script>
+        <!-- custom scrollbar plugin -->
+        <script src="js/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script>
+        (function($) {
+            $(window).on("load", function() {
+
+                $("a[rel='load-content']").click(function(e) {
+                    e.preventDefault();
+                    var url = $(this).attr("href");
+                    $.get(url, function(data) {
+                        $(".content .mCSB_container").append(data); //load new content inside .mCSB_container
+                        //scroll-to appended content 
+                        $(".content").mCustomScrollbar("scrollTo", "h2:last");
+                    });
+                });
+
+                $(".content").delegate("a[href='top']", "click", function(e) {
+                    e.preventDefault();
+                    $(".content").mCustomScrollbar("scrollTo", $(this).attr("href"));
+                });
+
+            });
+        })(jQuery);
+        </script>
         <!-- footer start -->
         <footer class="copy">
             <p><small>&copy;2018&nbsp;汇旺集团</small></p>
@@ -257,7 +219,16 @@
     <!-- menu end -->
     <!-- content start -->
     <div id="content">
-        222
+        <div style="height: 100%;">
+            <div class="content_header">
+                <ul>
+                    <li class="sele">首页<a href="#"></a></li>
+                    <li>个人中心<a href="#"></a></li>
+                </ul>
+            </div>
+            <iframe src="index2.html" frameborder="0" width="100%" height="100%">
+            </iframe>
+        </div>
     </div>
 </body>
 
