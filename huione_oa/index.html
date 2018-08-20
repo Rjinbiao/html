@@ -198,7 +198,7 @@
                     var url = $(this).attr("href");
                     $.get(url, function(data) {
                         $(".content .mCSB_container").append(data); //load new content inside .mCSB_container
-                        //scroll-to appended content 
+                        //scroll-to appended content
                         $(".content").mCustomScrollbar("scrollTo", "h2:last");
                     });
                 });

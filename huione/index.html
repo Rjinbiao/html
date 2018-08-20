@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>Huione OA</title>
+    <meta charset="UTF-8">
+    <!-- 编码格式 -->
+    <meta name="renderer" content="webkit">
+    <!-- 浏览器优先使用谷歌内核 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 自适应布局 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,Chrome=1">
+    <!-- 邮箱使用最新版Ie或Chrome -->
+    <meta name="keywords" content="">
+    <!-- 关键词 -->
+    <meta name="description" content="your description">
+    <!-- 描述 -->
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" type="text/css" href="style/public.css">
+    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <!-- ico图片 -->
+    <style></style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="pone_menu">
+            <a class="pone_menu_icon" href="#"></a>
+            <ul class="menu">
+                <li>
+                    <a href="#" class="home ption" target="">首页</a>
+                </li>
+                <li>
+                    <a href="#" class="user_info ption" target="">个人信息</a>
+                </li>
+                <li>
+                    <a href="#" onclick="$(this).parent().find('.task_task').toggle()" class="task ption" target="">任务管理</a>
+                    <ul class="task_task">
+                        <li><a href="#" class="new_task ption">新增任务</a></li>
+                        <li><a href="#" class="my_task ption">我的任务</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="$(this).parent().find('.personnel_personnel').toggle()" class="personnel ption" target="">人事&amp;考勤</a>
+                    <ul class="personnel_personnel">
+                        <li><a href="#" class="leave ption">请假申请</a></li>
+                        <li><a href="#" class="travel ption">出差申请</a></li>
+                        <li><a href="#" class="application ption">我的申请</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="$(this).parent().find('.finance_finance').toggle()" class="finance ption" target="">财务&amp;报销</a>
+                    <ul class="finance_finance">
+                        <li><a href="#" class="reimburse ption">报销</a></li>
+                        <li><a href="#" class="loan ption">借款</a></li>
+                        <li><a href="#" class="application2 ption">我的申请</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="$(this).parent().find('.report_report').toggle()" class="report ption" target="">我的报表</a>
+                    <ul class="report_report">
+                        <li><a href="#" class="my_report ption">我的报表1</a></li>
+                        <li><a href="#" class="my_report2 ption">我的报表2</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onclick="$(this).parent().find('.post_post').toggle()" class="post ption" target="">公告管理</a>
+                    <ul class="post_post">
+                        <li><a href="#" class="new_post ption">新增公告</a></li>
+                        <li><a href="#" class="history_post ption">公告历史</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="feedback ption" target="">意见反馈</a>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="logo"></a>
+        <a href="" class="menu_small"></a>
+        <div class="user">
+            <div class="user_info">
+                <a href="">
+                    <img src="images/user.png" alt="Profile Picture">
+                    <span class="User_name">Admin</span>
+                </a>
+                <ul>
+                    <li>
+                        <a href="#">我的信息</a>
+                    </li>
+                    <li>
+                        <a href="#">我的消息</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="drop_out" href="#"></a>
+        </div>
+    </header>
+</body>
+
+</html>
