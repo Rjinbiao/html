@@ -3,6 +3,7 @@
     padding: 0;
     font-family:optima Fzsx Hylx fzqk;
     font-size: 1em;
+    background-color: rgb(244,245,246);
 }
 
 @font-face {
@@ -44,6 +45,7 @@ li {
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
 }
 a:active {

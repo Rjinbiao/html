@@ -15,18 +15,19 @@
     <!-- 关键词 -->
     <meta name="description" content="your description">
     <!-- 描述 -->
-    <link rel="shortcut icon" type="image/x-icon" href="">
-    <link rel="stylesheet" type="text/css" href="style/public.css">
-    <link rel="stylesheet" type="text/css" href="style/index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="logo_success.png">
     <!-- ico图片 -->
-    <style></style>
+    <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/index.css">
+    <script src="js/jQuery.js" charset="utf-8"></script>
+
 </head>
 
 <body>
-    <header id="header">
-        <div class="pone_menu">
-            <a class="pone_menu_icon" href="#"></a>
-            <ul class="menu">
+    <header>
+        <div id="pone_menu">
+            <a href=""></a>
+            <ul id="pone_menu_context">
                 <li>
                     <a href="#" class="home ption" target="">首页</a>
                 </li>
@@ -76,24 +77,18 @@
             </ul>
         </div>
         <a href="#" class="logo"></a>
-        <a href="" class="menu_small"></a>
-        <div class="user">
-            <div class="user_info">
-                <a href="">
-                    <img src="images/user.png" alt="Profile Picture">
-                    <span class="User_name">Admin</span>
-                </a>
-                <ul>
-                    <li>
-                        <a href="#">我的信息</a>
-                    </li>
-                    <li>
-                        <a href="#">我的消息</a>
-                    </li>
-                </ul>
-            </div>
-            <a class="drop_out" href="#"></a>
+        <a href="#" id="menu_small"></a>
+        <div id="user">
+            <a href="#">
+                <img src="images/user.png" alt="User">
+                <span id="User_name">Admin</span>
+            </a>
+            <ul id="user_content">
+                <li><a href="#">个人信息</a></li>
+                <li><a href="#">我的消息</a></li>
+            </ul>
         </div>
+        <a href="#" class="sign_out"></a>
     </header>
 </body>
 
