@@ -1,0 +1,24 @@
+{
+//   "workbench.activityBar.visible": true,
+    // 指定在工作台中使用的图标主题，或指定 "null" 以不显示任何文件图标。
+  //  - null: 无文件图标
+  //  - vs-minimal
+  //  - vs-seti
+  //  - vscode-great-icons
+  //  - eq-material-theme-icons
+  //  - eq-material-theme-icons-darker
+  //  - eq-material-theme-icons-palenight
+  //  - eq-material-theme-icons-ocean
+  //  - eq-material-theme-icons-light
+  //  - file-icons
+  //  - file-icons-colourless
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.statusBar.feedback.visible": false,
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.fontAliasing": "auto",
+  "materialTheme.autoApplyIcons": false,
+  "materialTheme.accentPrevious": "#000",
+  "emmet.triggerExpansionOnTab": true,
+
+
+}

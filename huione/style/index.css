@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: rgb(244, 245, 246)
 }
 
 /* header start */
@@ -11,25 +12,406 @@ body {
 header {
     width: 100%;
     height: 52px;
-    background-color: rgba(55, 71, 179,1);
-    box-shadow: 0 5px 10px rgba(55, 71, 179,0.3);
+    background-color: rgba(55, 71, 179, 1);
+    box-shadow: 0 5px 10px rgba(55, 71, 179, 0.3);
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999;
 }
 
-div#pone_menu{
+div#pone_menu {
     display: none;
-    width: auto;
+    width: 100%;
     height: auto;
 }
-div#pone_menu>a{
+
+div#pone_menu>a {
     width: 52px;
     height: 52px;
     background: url(../images/pone_menu.svg) no-repeat center center;
 }
-.logo{
+
+.logo {
     width: 260px;
     height: 52px;
-    background: url()
+    background: url(../images/logo.svg) no-repeat center center;
+    background-size: 138px;
+}
+
+.logo:active {
+    box-shadow: none;
+}
+
+a.logo:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#menu_small {
+    width: 52px;
+    height: 52px;
+    background: url(../images/menu.svg) no-repeat center center;
+    background-size: 22px;
+}
+
+#menu_small:hover {
+    background-color: rgba(0, 0, 0, 0.15)
+}
+
+#user {
+    width: 120px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: -212px;
+}
+
+#user>a {
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+}
+
+#user>a img {
+    width: 32px;
+    height: 32px;
+    margin: 10px;
+}
+
+#user>a span {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    max-width: 60px;
+    line-height: 52px;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#user ul {
+    width: 120px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 52px;
+    left: 100%;
+    margin-left: -120px;
+    box-sizing: border-box;
+    border: 1px solid rgb(230, 230, 230);
+    display: none;
+}
+
+#user li {
+    width: 100%;
+    height: 52px;
+}
+
+#user li a {
+    width: 100%;
+    height: 100%;
+    line-height: 52px;
+    text-indent: 10px;
+    color: rgb(55, 71, 79);
+}
+
+#user:hover ul {
+    display: block;
+}
+
+.sign_out {
+    width: 52px;
+    height: 52px;
+    background: url(../images/log_in.svg) no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: -72px;
+}
+
+@media screen and (max-width:800px) {
+    .sign_out {
+        display: none;
+    }
+    #user #user_name {
+        display: none;
+    }
+    #user {
+        width: 52px;
+        margin-left: -62px;
+    }
+    #menu_small {
+        display: none;
+    }
+    .logo {
+        position: absolute;
+        left: 50%;
+        margin-left: -130px;
+    }
+    header #pone_menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #pone_menu>ul {
+        display: none;
+        position: absolute;
+        top: 52px;
+        width: 100%;
+        height: auto;
+        background: rgb(255, 255, 255);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    #pone_menu>ul li {
+        width: 100%;
+        height: auto;
+    }
+    #pone_menu>ul a {
+        width: 100%;
+        height: 52px;
+        line-height: 52px;
+        text-align: center;
+        box-sizing: border-box;
+        border-bottom: 1px solid rgb(234, 234, 234);
+        color: rgb(55, 71, 79);
+    }
+    #pone_menu>ul a:hover {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    #pone_menu li ul {
+        background-color: rgb(244, 245, 246);
+        border-bottom: 1px solid rgb(234, 234, 234);
+    }
+    #pone_menu li ul a {
+        border: none;
+    }
+    #pone_menu ul ul {
+        display: none;
+    }
+}
+
+/* header end */
+
+/* menu start */
+
+#content-1 {
+    width: 260px;
+    height: 100vh;
+    background: rgb(31, 40, 44);
+    display: inline-block;
+    position: fixed;
+    overflow: auto;
+}
+
+#content-1 form {
+    margin-top: 52px;
+    width: 100%;
+    height: 62px;
+    position: relative;
+}
+
+form div {
+    height: 32px;
+    margin: 76px 14px 15px;
+    /* box-sizing: border-box; */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+form #search {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: none;
+    text-indent: 10px;
+    color: rgba(255, 255, 255, .6);
+}
+
+form #submit {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    margin-left: -47px;
+    background: url(../images/search.svg) no-repeat center center;
+    border: none;
+}
+
+#content-1 ul {
+    width: 100%;
+    height: auto;
+}
+
+#content-1 ul li {
+    width: 100%;
+    height: auto;
+}
+
+#content-1 ul a {
+    width: 100%;
+    height: 52px;
+    color: rgba(255, 255, 255, 0.8);
+    text-indent: 43px;
+    line-height: 52px;
+    font-size: 1em;
+}
+
+#content-1 li a.feedback {
+    margin-bottom: 36px;
+}
+
+#content-1 li ul a {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+}
+
+#content-1 li ul {
+    display: none;
+}
+
+#content-1 li a.home {
+    background: url(../images/air-play.svg) no-repeat 15px center/18px;
+}
+
+#content-1 li a.user_info {
+    background: url(../images/user.svg) no-repeat 15px center/18px;
+}
+
+#content-1 li a.task {
+    background: url(../images/flag.svg) no-repeat 15px center/18px, url(../images/more.svg) no-repeat 231px center/14px;
+}
+
+#content-1 li a.personnel {
+    background: url(../images/clock.svg) no-repeat 15px center/18px, url(../images/more.svg) no-repeat 231px center/14px;
+}
+
+#content-1 li a.finance {
+    background: url(../images/pie_graph.svg) no-repeat 15px center/18px, url(../images/more.svg) no-repeat 231px center/14px;
+}
+
+#content-1 li a.report {
+    background: url(../images/paper.svg) no-repeat 15px center/18px, url(../images/more.svg) no-repeat 231px center/14px;
+}
+
+#content-1 li a.post {
+    background: url(../images/file.svg) no-repeat 15px center/18px, url(../images/more.svg) no-repeat 231px center/14px;
+}
+
+#content-1 li a.feedback {
+    background: url(../images/mail.svg) no-repeat 15px center/18px;
+}
+
+#content-1 ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+#content-1 li>ul {
+    display: none;
+}
+
+footer.copy {
+    width: 260px;
+    height: 36px;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    top: 100%;
+    margin-top: -36px;
+    line-height: 36px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.8em;
+    background-color: rgba(55, 71, 79, 1);
+}
+@media screen and (max-width:800px) {
+    #content-1{
+        display: none;
+    }
+}
+
+/* #content start */
+
+#content {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    /* border: 5px solid green; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#content_content {
+    width: auto;
+    height: 100%;
+    margin-left: 260px;
+    box-sizing: border-box;
+    padding-top: 52px;
+    position: relative;
+}
+
+.content_header{
+    width: 100%;
+    height: 32px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 1);
+    overflow: hidden;
+}
+.content_header ul{
+    width: 100%;
+    height: 32px;
+}
+.content_header li{
+    width: 200px;
+    height: 32px;
+    float: left;
+    text-align: center;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    box-sizing: border-box;
+    border-left: 1px solid rgb(233, 233, 233);
+    border-right: 1px solid rgb(233, 233, 233);
+}
+.content_header li a{
+    width: 32px;
+    height: 32px;
+    background: url(../images/close.svg) no-repeat center center/16px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: -32px;
+    display: none;
+}
+.content_header li:hover a{
+    display: block;
+}
+.content_header li.sele{
+    background-color: rgb(244, 245, 246)
+}
+
+iframe{
+    box-sizing: border-box;
+    padding-top:32px; 
+}
+
+
+@media screen and (max-width:800px){
+    #content_content {
+        width: auto;
+        height: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
+        padding-top: 52px;
+    }
+    .content_header{
+        display: none;
+    }
+    iframe{
+        box-sizing: border-box;
+        padding-top:0; 
+    }
 }

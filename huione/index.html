@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 
 <head>
-    <title>Huione OA</title>
     <meta charset="UTF-8">
     <!-- 编码格式 -->
+    <title>Huione OA</title>
     <meta name="renderer" content="webkit">
     <!-- 浏览器优先使用谷歌内核 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,95 +17,133 @@
     <!-- 描述 -->
     <link rel="shortcut icon" type="image/x-icon" href="logo_success.png">
     <!-- ico图片 -->
-    <link rel="stylesheet" href="style/public.css">
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/public.css">
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
+	<!--[if lt IE 9]-->
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<!--[endif]-->
+	
+	<!-- custom scrollbar stylesheet -->
+	<link rel="stylesheet" href="style/jquery.mCustomScrollbar.css">
     <script src="js/jQuery.js" charset="utf-8"></script>
+    <script>
+        window.onload = function () {
+            var oUl = document.getElementById('pone_menu_context');
+            var oDiv = document.getElementById('content_content');
 
+            oUl.style['max-height'] = (window.innerHeight - 52) + 'px';
+            // oDiv.style.height = (window.innerHeight - 52) + 'px';
+        }
+
+        function PoneMenu() {
+            var oUl = document.getElementById('pone_menu_context');
+
+            if (oUl.style.display == 'block') {
+                oUl.style.display = 'none';
+            } else {
+                oUl.style.display = 'block';
+            }
+        }
+
+        function User() {
+            var oUl = document.getElementById('user_content');
+
+            if (oUl.style.display == 'block') {
+                oUl.style.display = 'none';
+            } else {
+                oUl.style.display = 'block';
+            }
+        }
+    </script>
 </head>
 
 <body>
+    <!-- header start -->
     <header>
+        <!-- pone menu start -->
         <div id="pone_menu">
-            <a href=""></a>
+            <a onclick="PoneMenu()"></a>
             <ul id="pone_menu_context">
                 <li>
-                    <a href="#" class="home ption" target="">首页</a>
+                    <a href="home.html" class="home ption" target="MyIferame">首页</a>
                 </li>
                 <li>
-                    <a href="#" class="user_info ption" target="">个人信息</a>
+                    <a href="#" class="user_info ption" target="MyIferame">个人信息</a>
                 </li>
                 <li>
-                    <a href="#" onclick="$(this).parent().find('.task_task').toggle()" class="task ption" target="">任务管理</a>
+                    <a href="#" onclick="$(this).parent().find('.task_task').toggle()" class="task ption">任务管理</a>
                     <ul class="task_task">
                         <li>
-                            <a href="#" class="new_task ption">新增任务</a>
+                            <a href="#" class="new_task ption" target="MyIferame">新增任务</a>
                         </li>
                         <li>
-                            <a href="#" class="my_task ption">我的任务</a>
+                            <a href="#" class="my_task ption" target="MyIferame">我的任务</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" onclick="$(this).parent().find('.personnel_personnel').toggle()" class="personnel ption" target="">人事&amp;考勤</a>
+                    <a href="#" onclick="$(this).parent().find('.personnel_personnel').toggle()" class="personnel ption">人事&amp;考勤</a>
                     <ul class="personnel_personnel">
                         <li>
-                            <a href="#" class="leave ption">请假申请</a>
+                            <a href="#" class="leave ption" target="MyIferame">请假申请</a>
                         </li>
                         <li>
-                            <a href="#" class="travel ption">出差申请</a>
+                            <a href="#" class="travel ption" target="MyIferame">出差申请</a>
                         </li>
                         <li>
-                            <a href="#" class="application ption">我的申请</a>
+                            <a href="#" class="application ption" target="MyIferame">我的申请</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" onclick="$(this).parent().find('.finance_finance').toggle()" class="finance ption" target="">财务&amp;报销</a>
+                    <a href="#" onclick="$(this).parent().find('.finance_finance').toggle()" class="finance ption">财务&amp;报销</a>
                     <ul class="finance_finance">
                         <li>
-                            <a href="#" class="reimburse ption">报销</a>
+                            <a href="#" class="reimburse ption" target="MyIferame">报销</a>
                         </li>
                         <li>
-                            <a href="#" class="loan ption">借款</a>
+                            <a href="#" class="loan ption" target="MyIferame">借款</a>
                         </li>
                         <li>
-                            <a href="#" class="application2 ption">我的申请</a>
+                            <a href="#" class="application2 ption" target="MyIferame">我的申请</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" onclick="$(this).parent().find('.report_report').toggle()" class="report ption" target="">我的报表</a>
+                    <a href="#" onclick="$(this).parent().find('.report_report').toggle()" class="report ption">我的报表</a>
                     <ul class="report_report">
                         <li>
-                            <a href="#" class="my_report ption">我的报表1</a>
+                            <a href="#" class="my_report ption" target="MyIferame">我的报表1</a>
                         </li>
                         <li>
-                            <a href="#" class="my_report2 ption">我的报表2</a>
+                            <a href="#" class="my_report2 ption" target="MyIferame">我的报表2</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" onclick="$(this).parent().find('.post_post').toggle()" class="post ption" target="">公告管理</a>
+                    <a href="#" onclick="$(this).parent().find('.post_post').toggle()" class="post ption">公告管理</a>
                     <ul class="post_post">
                         <li>
-                            <a href="#" class="new_post ption">新增公告</a>
+                            <a href="#" class="new_post ption" target="MyIferame">新增公告</a>
                         </li>
                         <li>
-                            <a href="#" class="history_post ption">公告历史</a>
+                            <a href="#" class="history_post ption" target="MyIferame">公告历史</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="feedback ption" target="">意见反馈</a>
+                    <a href="#" class="feedback ption" target="MyIferame">意见反馈</a>
                 </li>
             </ul>
         </div>
         <a href="#" class="logo"></a>
         <a href="#" id="menu_small"></a>
         <div id="user">
-            <a href="#">
+            <a href="JavaScript:User()">
                 <img src="images/user.png" alt="User">
-                <span id="User_name">Admin</span>
+                <span id="user_name">Admin</span>
             </a>
             <ul id="user_content">
                 <li>
@@ -118,6 +156,132 @@
         </div>
         <a href="#" class="sign_out"></a>
     </header>
+    <!-- header end -->
+    <!-- web menu start -->
+    <div id="content-1" class="content">
+        <!-- search start -->
+        <form class="search" action="#" method="get" name="menu_search">
+            <div>
+                <input type="text" name="search" placeholder="搜索" id="search" form="menu_search">
+                <input type="submit" name="submit" id="submit" value="" form="menu_search">
+            </div>
+        </form>
+        <!-- menu start -->
+        <ul>
+            <li>
+                <a href="home.html" class="home ption" target="MyIferame">首页</a>
+            </li>
+            <li>
+                <a href="#" class="user_info ption" target="MyIferame">个人信息</a>
+            </li>
+            <li>
+                <a onclick="$(this).parent().find('.task_task').toggle()" class="task ption">任务管理</a>
+                <ul class="task_task">
+                    <li>
+                        <a href="#" class="new_task ption" target="MyIferame">新增任务</a>
+                    </li>
+                    <li>
+                        <a href="#" class="my_task ption" target="MyIferame">我的任务</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="$(this).parent().find('.personnel_personnel').toggle()" class="personnel ption">人事&amp;考勤</a>
+                <ul class="personnel_personnel">
+                    <li>
+                        <a href="#" class="leave ption" target="MyIferame">请假申请</a>
+                    </li>
+                    <li>
+                        <a href="#" class="travel ption" target="MyIferame">出差申请</a>
+                    </li>
+                    <li>
+                        <a href="#" class="application ption" target="MyIferame">我的申请</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="$(this).parent().find('.finance_finance').toggle()" class="finance ption">财务&amp;报销</a>
+                <ul class="finance_finance">
+                    <li>
+                        <a href="#" class="reimburse ption" target="MyIferame">报销</a>
+                    </li>
+                    <li>
+                        <a href="#" class="loan ption" target="MyIferame">借款</a>
+                    </li>
+                    <li>
+                        <a href="#" class="application2 ption" target="MyIferame">我的申请</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="$(this).parent().find('.report_report').toggle()" class="report ption">我的报表</a>
+                <ul class="report_report">
+                    <li>
+                        <a href="#" class="my_report ption" target="MyIferame">我的报表1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="my_report2 ption" target="MyIferame">我的报表2</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" onclick="$(this).parent().find('.post_post').toggle()" class="post ption">公告管理</a>
+                <ul class="post_post">
+                    <li>
+                        <a href="#" class="new_post ption" target="MyIferame">新增公告</a>
+                    </li>
+                    <li>
+                        <a href="#" class="history_post ption" target="MyIferame">公告历史</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="feedback ption" target="MyIferame">意见反馈</a>
+            </li>
+        </ul>
+
+        <!-- footer start -->
+        <footer class="copy">
+            <p>
+                <small>&copy;2018&nbsp;汇旺集团</small>
+            </p>
+        </footer>
+    </div>
+
+    <!-- content start -->
+    <div id="content">
+        <div id="content_content">
+            <div class="content_header">
+                <ul>
+                    <li class="sele"><span>Home</span><a href="#"></a></li>
+                    <li><span>Home</span><a href="#"></a></li>
+                    <li><span>Home</span><a href="#"></a></li>
+                </ul>
+            </div>
+           <iframe src="home.html" frameborder="0" width="100%" height="100%" id="MyIferame" name="MyIferame">
+                您的浏览器不支持iframe标签，我也没有办法😊😊😊
+           </iframe>
+        </div>
+    </div>
+
+
+    <!-- Google CDN jQuery with fallback to local -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/minified/jquery-1.11.0.min.js"><\/script>')</script>
+	
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	
+	<script>
+		(function($){
+			$(window).on("load",function(){
+				
+				$("#content-1").mCustomScrollbar({
+					theme:"minimal"
+				});
+				
+			});
+		})(jQuery);
+	</script>
 </body>
 
 </html>
