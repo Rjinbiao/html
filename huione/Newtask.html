@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <!-- 编码格式 -->
+    <meta name="renderer" content="webkit">
+    <!-- 浏览器优先使用谷歌内核 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 自适应布局 -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,Chrome=1">
+    <!-- 邮箱使用最新版Ie或Chrome -->
+    <meta name="keywords" content="">
+    <!-- 关键词 -->
+    <meta name="description" content="your description">
+    <!-- 描述 -->
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
+    <!-- ico图片 -->
+    <link rel="stylesheet" type="text/css" href="style/public.css">
+    <link rel="stylesheet" type="text/css" href="style/content.css">
+    <link rel="stylesheet" type="text/css" href="style/Newtask.css">
+    <style></style>
+</head>
+
+<body>
+    <div id="left">
+        <header>
+            <h2>任务详情</h2>
+        </header>
+        <div class="content">
+            <form action="#" enctype="application/x-www-form-urlencoded" method="post" required>
+                <div class="task_type sele">
+                    <span><label for="">任务类型<i>*</i></label></span>
+                    <select>
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="opel">Opel</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <div class="task_name sele">
+                    <span><label for="">任务名称<i>*</i></label></span>
+                    <input type="text" name="task_name" id="task_name" autocomplete="on" required>
+                </div>
+                <div class="release sele">
+                    <span><label for="">发布日期<i>*</i></label></span>
+                    <input type="date" name="release" id="release" required>
+                </div>
+                <div class="pone_number sele">
+                    <span><label for="">责任人<i>*</i></label></span>
+                    <input type="text" name="pone_number" id="pone_number" autocomplete="on" required>
+                </div>
+                <div class="deadline sele">
+                    <span><label for="">完成日期<i>*</i></label></span>
+                    <input type="date" name="deadline" id="deadline" required>
+                </div>
+                <div class="password sele">
+                    <span><label for="">任务描述<i>*</i></label></span>
+                    <input type="text" name="password" id="password" required>
+                </div>
+                <div class="button">
+                    <button type="submit" name="modify_info" id="modify_info">发布</button>
+                    <button type="button" name="modify_password" id="modify_password">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <aside id="task">
+        <header>
+            <h2>待完成任务</h2>
+        </header>
+        <div class="no_content content">
+            <p class="no_content">暂时没有未完成任务</p>
+        </div>
+    </aside>
+</body>
+
+</html>

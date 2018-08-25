@@ -235,10 +235,10 @@ table th {
         margin-right: 0px;
         min-height: 500px;
     }
-    div.user p{
-        /* margin-left: 48px; */
-        /* margin-top: -38px; */
-    }
+    /* div.user p{
+        margin-left: 48px;
+        margin-top: -38px;
+    } */
     div.user p img {
         display: none;
     }

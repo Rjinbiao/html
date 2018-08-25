@@ -12,13 +12,13 @@
   //  - eq-material-theme-icons-light
   //  - file-icons
   //  - file-icons-colourless
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.statusBar.feedback.visible": false,
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.fontAliasing": "auto",
-  "materialTheme.autoApplyIcons": false,
-  "materialTheme.accentPrevious": "#000",
-  "emmet.triggerExpansionOnTab": true,
+  // "workbench.iconTheme": "material-icon-theme",
+  // "workbench.statusBar.feedback.visible": false,
+  // "workbench.editor.tabSizing": "shrink",
+  // "workbench.fontAliasing": "auto",
+  // "materialTheme.autoApplyIcons": false,
+  // "materialTheme.accentPrevious": "#000",
+  // "emmet.triggerExpansionOnTab": true,
 
 
 }

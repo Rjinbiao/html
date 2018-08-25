@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的任务</title>
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,Chrome=1">
+    <link rel="stylesheet" type="text/css" href="style/public.css">
+    <link rel="stylesheet" type="text/css" href="style/table.css">
+    <script src="js/number.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+        }
+
+        .mian {
+            height: 70px;
+            position: relative;
+        }
+
+        form div {
+            width: 180px;
+            height: 40px;
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+
+        form div:last-child {
+            width: 120px;
+            height: 40px;
+        }
+
+        form div input {
+            width: 100%;
+            height: 100%;
+            background-color: none;
+            box-sizing: border-box;
+            background: url(../images/icon_1.svg) no-repeat left center;
+            background-size: 22px;
+            border: none;
+            border-bottom: 1px solid rgba(55, 71, 79, 0.4);
+            text-indent: 27px;
+        }
+
+        form div:last-child input {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(23, 185, 198, 1);
+            background-image: none;
+            text-align: center;
+            text-indent: 0;
+            color: rgb(255, 255, 255);
+            line-height: 100%;
+            border: none;
+        }
+
+        .mian>div a {
+            width: 120px;
+            height: 40px;
+            background-color: rgb(52, 140, 221);
+            line-height: 40px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            margin-top: 10px;
+
+        }
+
+        .form {
+            height: auto;
+            min-height: 100px;
+            background-color: rgba(255, 255, 255, 1);
+            box-sizing: border-box;
+            box-shadow: 0 5px 10px rgba(55, 71, 79, 0.2);
+        }
+    </style>
+
+    <script>
+        window.onload = function () {
+            var oInput = document.getElementById('zong');
+            var aInput = document.getElementsByClassName("fen");
+
+
+            oInput.onclick = function () {
+                for (i = 0; i < aInput.length; i++) {
+
+                    if (oInput.checked == true) {
+                        aInput[i].checked = true;
+                    } else {
+                        aInput[i].checked = false;
+                    }
+                }
+            };
+        }
+    </script>
+</head>
+
+<body>
+    <div class="mian">
+        <form action="#" method="get">
+            <div class="fl">
+                <input type="text" list="url_list" id="type" autocomplete="off" placeholder="项目类型">
+                <datalist id="url_list">
+                    <option selected label="W3School" value="Internet Explorer">
+                        <option value="Firefox">
+                            <option value="Chrome">
+                                <option value="Opera">
+                                    <option value="Safari">
+                </datalist>
+            </div>
+            <div class="fl">
+                <input type="text" name="responsible" autocomplete="off" id="responsible" placeholder="责任人">
+            </div>
+            <div class="demo fl">
+                <input type="text" class="input" id="pickdate" autocomplete="off" placeholder="创建时间">
+                <script src="js/laydate/laydate.js"></script>
+                <!-- 改成你的路径 -->
+                <script>
+                    lay('#version').html('-v' + laydate.v);
+                    //执行一个laydate实例
+                    laydate.render({
+                        elem: '#pickdate' //指定元素
+                    });
+                </script>
+            </div>
+            <div class="submit fl">
+                <input type="submit" value="查询">
+            </div>
+        </form>
+        <div class="fr">
+            <a href="Newtask.html" target="MyIferame">新建任务</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="form">
+        <div class="head">
+            <a class="fl" href="#">批量删除</a>
+            <a class="fl" href="#">修改</a>
+            <a class="fl" href="#">编辑</a>
+            <a class="fl" href="#">标记</a>
+            <a class="fl" href="#">下载</a>
+            <p class="fr">每页显示&nbsp;
+                <select>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option selected value="20">20</option>
+                    <option value="50">50</option>
+                </select>&nbsp;条</p>
+        </div>
+        <div class="clear"></div>
+        <table id="table">
+
+            <thead>
+
+                <tr>
+                    <th>
+                        <input id="zong" type="checkbox">
+                    </th>
+                    <th>任务编号</th>
+                    <th>任务名称</th>
+                    <th>负责人</th>
+                    <th>创建时间</th>
+                    <th>任务状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input class="fen" type="checkbox">
+                    </td>
+                    <td data-label="任务编号">00001</td>
+                    <td data-label="任务名称">羽毛球赛</td>
+                    <td data-label="负责人">某某某</td>
+                    <td data-label="创建时间">2017-02-21 10:12:55</td>
+                    <td data-label="任务状态">进行中</td>
+                    <td data-label="操作">
+                        <a href="#" class="view">查看</a>
+                        <a href="#" class="edit">编辑</a>
+                        <a href="#" class="del">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="fen" type="checkbox">
+                    </td>
+                    <td data-label="任务编号">00001</td>
+                    <td data-label="任务名称">羽毛球赛</td>
+                    <td data-label="负责人">某某某</td>
+                    <td data-label="创建时间">2017-02-21 10:12:55</td>
+                    <td data-label="任务状态">进行中</td>
+                    <td data-label="操作">
+                        <a href="#" class="view">查看</a>
+                        <a href="#" class="edit">编辑</a>
+                        <a href="#" class="del">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="fen" type="checkbox">
+                    </td>
+                    <td data-label="任务编号">00001</td>
+                    <td data-label="任务名称">羽毛球赛</td>
+                    <td data-label="负责人">某某某</td>
+                    <td data-label="创建时间">2017-02-21 10:12:55</td>
+                    <td data-label="任务状态">进行中</td>
+                    <td data-label="操作">
+                        <a href="#" class="view">查看</a>
+                        <a href="#" class="edit">编辑</a>
+                        <a href="#" class="del">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="fen" type="checkbox">
+                    </td>
+                    <td data-label="任务编号">00001</td>
+                    <td data-label="任务名称">羽毛球赛</td>
+                    <td data-label="负责人">某某某</td>
+                    <td data-label="创建时间">2017-02-21 10:12:55</td>
+                    <td data-label="任务状态">进行中</td>
+                    <td data-label="操作">
+                        <a href="#" class="view">查看</a>
+                        <a href="#" class="edit">编辑</a>
+                        <a href="#" class="del">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="fen" type="checkbox">
+                    </td>
+                    <td data-label="任务编号">00001</td>
+                    <td data-label="任务名称">羽毛球赛</td>
+                    <td data-label="负责人">某某某</td>
+                    <td data-label="创建时间">2017-02-21 10:12:55</td>
+                    <td data-label="任务状态">进行中</td>
+                    <td data-label="操作">
+                        <a href="#" class="view">查看</a>
+                        <a href="#" class="edit">编辑</a>
+                        <a href="#" class="del">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="fen" type="checkbox">
+                    </td>
+                    <td data-label="任务编号">00001</td>
+                    <td data-label="任务名称">羽毛球赛</td>
+                    <td data-label="负责人">某某某</td>
+                    <td data-label="创建时间">2017-02-21 10:12:55</td>
+                    <td data-label="任务状态">进行中</td>
+                    <td data-label="操作">
+                        <a href="#" class="view">查看</a>
+                        <a href="#" class="edit">编辑</a>
+                        <a href="#" class="del">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="fen" type="checkbox">
+                    </td>
+                    <td data-label="任务编号">00001</td>
+                    <td data-label="任务名称">羽毛球赛</td>
+                    <td data-label="负责人">某某某</td>
+                    <td data-label="创建时间">2017-02-21 10:12:55</td>
+                    <td data-label="任务状态">进行中</td>
+                    <td data-label="操作">
+                        <a href="#" class="view">查看</a>
+                        <a href="#" class="edit">编辑</a>
+                        <a href="#" class="del">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="fen" type="checkbox">
+                    </td>
+                    <td data-label="任务编号">00001</td>
+                    <td data-label="任务名称">羽毛球赛</td>
+                    <td data-label="负责人">某某某</td>
+                    <td data-label="创建时间">2017-02-21 10:12:55</td>
+                    <td data-label="任务状态">进行中</td>
+                    <td data-label="操作">
+                        <a href="#" class="view">查看</a>
+                        <a href="#" class="edit">编辑</a>
+                        <a href="#" class="del">删除</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input class="fen" type="checkbox">
+                    </td>
+                    <td data-label="任务编号">00001</td>
+                    <td data-label="任务名称">羽毛球赛</td>
+                    <td data-label="负责人">某某某</td>
+                    <td data-label="创建时间">2017-02-21 10:12:55</td>
+                    <td data-label="任务状态">进行中</td>
+                    <td data-label="操作">
+                        <a href="#" class="view">查看</a>
+                        <a href="#" class="edit">编辑</a>
+                        <a href="#" class="del">删除</a>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+        <div class="foot">
+            <a class="fl" href="#">批量删除</a>
+            <a class="fl" href="#">修改</a>
+            <a class="fl" href="#">编辑</a>
+            <a class="fl" href="#">标记</a>
+            <a class="fl" href="#">下载</a>
+            <div class="fr">
+                第&nbsp;
+                <span class="start">1</span>&nbsp;至&nbsp;
+                <span class="end">20</span>&nbsp;项，共&nbsp;
+                <span class="all">230</span>&nbsp;项
+                <ul>
+                    <li class="previous_page">
+                        <img src="images/ic_chevron_left.svg">
+                    </li>
+                    <li class="page_number sele">1</li>
+                    <li class="page_number">2</li>
+                    <li class="page_number">3</li>
+                    <li class="page_number">4</li>
+                    <li class="page_number">5</li>
+                    <li class="omit">...</li>
+                    <li class="last_page">12</li>
+                    <li class="next_page">
+                        <img src="images/ic_chevron_right.svg">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+    </div>
+</body>
+
+</html>
