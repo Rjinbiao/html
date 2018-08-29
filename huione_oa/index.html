@@ -2,185 +2,31 @@
 <html lang="zh-CN">
 
 <head>
-    <title>Huione OA</title>
     <meta charset="UTF-8">
-    <!-- 编码格式 -->
+    <title>Huione OA</title>
     <meta name="renderer" content="webkit">
-    <!-- 浏览器优先使用谷歌内核 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 自适应布局 -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge,Chrome=1">
-    <!-- 邮箱使用最新版Ie或Chrome -->
-    <meta name="keywords" content="">
-    <!-- 关键词 -->
-    <meta name="description" content="your description">
-    <!-- 描述 -->
-    <link rel="shortcut icon" type="image/x-icon" href="bitbug_favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="logo_success.png">
     <!-- ico图片 -->
-    <link rel="stylesheet" href="style/public.css">
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
+    <!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
     <link rel="stylesheet" href="style/index.css">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript">
-    window.onload = function() {
-        var oUl = document.getElementById("pone_menu_context");
-        var oDiv = document.getElementById("menu");
-        var oDiv2 = document.getElementById("content");
-
-        oUl.style.height = (window.innerHeight - 52) + 'px';
-        oDiv.style.height = (window.innerHeight - 122) + 'px';
-        oDiv2.style.height = (window.innerHeight - 52) + 'px';
-        oDiv2.style.width = (window.innerWidth - 260) + 'px';
-
-
-    }
-    </script>
+    <link rel="stylesheet" href="style/public.css">
 
 </head>
 
 <body>
-    <!-- header start -->
     <header>
-        <!-- pone_menu start -->
-        <div class="pone_menu">
-            <button id="icon_off" onclick="on()"></button>
-            <ul id="pone_menu_context">
-                <li>
-                    <a href="#" class="home ption" target="">首页</a>
-                </li>
-                <li>
-                    <a href="#" class="user_info ption" target="">个人信息</a>
-                </li>
-                <li>
-                    <a href="#" onclick="$(this).parent().find('.task_task').toggle()" class="task ption" target="">任务管理</a>
-                    <ul class="task_task">
-                        <li><a href="#" class="new_task ption">新增任务</a></li>
-                        <li><a href="#" class="my_task ption">我的任务</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" onclick="$(this).parent().find('.personnel_personnel').toggle()" class="personnel ption" target="">人事&amp;考勤</a>
-                    <ul class="personnel_personnel">
-                        <li><a href="#" class="leave ption">请假申请</a></li>
-                        <li><a href="#" class="travel ption">出差申请</a></li>
-                        <li><a href="#" class="application ption">我的申请</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" onclick="$(this).parent().find('.finance_finance').toggle()" class="finance ption" target="">财务&amp;报销</a>
-                    <ul class="finance_finance">
-                        <li><a href="#" class="reimburse ption">报销</a></li>
-                        <li><a href="#" class="loan ption">借款</a></li>
-                        <li><a href="#" class="application2 ption">我的申请</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" onclick="$(this).parent().find('.report_report').toggle()" class="report ption" target="">我的报表</a>
-                    <ul class="report_report">
-                        <li><a href="#" class="my_report ption">我的报表1</a></li>
-                        <li><a href="#" class="my_report2 ption">我的报表2</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" onclick="$(this).parent().find('.post_post').toggle()" class="post ption" target="">公告管理</a>
-                    <ul class="post_post">
-                        <li><a href="#" class="new_post ption">新增公告</a></li>
-                        <li><a href="#" class="history_post ption">公告历史</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#" class="feedback ption" target="">意见反馈</a>
-                </li>
-            </ul>
-        </div>
-        <div class="logo"></div>
-        <div class="web_menu_small"></div>
-        <div class="user">
-            <a href="#" class="user_name"><span>Admin</span></a>
-            <ul class="user_content">
-                <li><a href="#">我的信息</a></li>
-                <li><a href="#">我的消息</a></li>
-                <li><a href="#">退出</a></li>
-            </ul>
-        </div>
+            <i class="iconfont" style="color:red;">&#xe637;</i>
+            <p class="iconfont">&#xe61e;</p>
     </header>
-    <!-- header end -->
-    <form class="search" action="#" method="get" name="form">
-        <div>
-            <input type="text" name="search" value="search" id="search" form="form">
-            <input type="submit" name="submit" id="submit" value="" form="form">
-        </div>
-    </form>
-    <!-- menu start -->
-    <div id="menu" class="content mCustomScrollbar">
-        <!-- menu start -->
-        <ul>
-            <li>
-                <a href="#" class="home ption" target="">首页</a>
-            </li>
-            <li>
-                <a href="#" class="user_info ption" target="">个人信息</a>
-            </li>
-            <li>
-                <a href="#" onclick="$(this).parent().find('.task_task').toggle()" class="task ption" target="">任务管理</a>
-                <ul class="task_task">
-                    <li><a href="#" class="new_task ption">新增任务</a></li>
-                    <li><a href="#" class="my_task ption">我的任务</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" onclick="$(this).parent().find('.personnel_personnel').toggle()" class="personnel ption" target="">人事&amp;考勤</a>
-                <ul class="personnel_personnel">
-                    <li><a href="#" class="leave ption">请假申请</a></li>
-                    <li><a href="#" class="travel ption">出差申请</a></li>
-                    <li><a href="#" class="application ption">我的申请</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" onclick="$(this).parent().find('.finance_finance').toggle()" class="finance ption" target="">财务&amp;报销</a>
-                <ul class="finance_finance">
-                    <li><a href="#" class="reimburse ption">报销</a></li>
-                    <li><a href="#" class="loan ption">借款</a></li>
-                    <li><a href="#" class="application2 ption">我的申请</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" onclick="$(this).parent().find('.report_report').toggle()" class="report ption" target="">我的报表</a>
-                <ul class="report_report">
-                    <li><a href="#" class="my_report ption">我的报表1</a></li>
-                    <li><a href="#" class="my_report2 ption">我的报表2</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" onclick="$(this).parent().find('.post_post').toggle()" class="post ption" target="">公告管理</a>
-                <ul class="post_post">
-                    <li><a href="#" class="new_post ption">新增公告</a></li>
-                    <li><a href="#" class="history_post ption">公告历史</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#" class="feedback ption" target="">意见反馈</a>
-            </li>
-        </ul>
-        
-        <!-- footer start -->
-        <footer class="copy">
-            <p><small>&copy;2018&nbsp;汇旺集团</small></p>
-        </footer>
-    </div>
-    <!-- menu end -->
-    <!-- content start -->
-    <div id="content">
-        <div style="height: 100%;">
-            <div class="content_header">
-                <ul>
-                    <li class="sele">首页<a href="#"></a></li>
-                    <li>个人中心<a href="#"></a></li>
-                </ul>
-            </div>
-            <iframe src="index2.html" frameborder="0" width="100%" height="100%">
-            </iframe>
-        </div>
-    </div>
 </body>
 
 </html>

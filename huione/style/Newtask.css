@@ -23,6 +23,15 @@ i {
 
     border-bottom: 1px solid rgb(234, 234, 234);
 }
+#left .content form div.password{
+    position: relative;
+
+    /* width: 765px; */
+    height: 180px;
+    margin-top: 2px;
+
+    border-bottom: 1px solid rgb(234, 234, 234);
+}
 
 @media screen and (max-width: 1250px) {
     #left .content form div {
@@ -52,7 +61,7 @@ i {
     color: #9f9f9f;
 }
 
-#left .content form div input,select {
+#left .content form div input,select,textarea {
     font-size: 16px;
     line-height: 32px;
 
@@ -65,6 +74,11 @@ i {
     color: rgb(55, 71, 79);
     border: none;
     background: none;
+}
+textarea{
+    height: 160px;
+    border: 1px solid rgb(234, 234, 234);
+    line-height: 1.5em;
 }
 
 #left .content form div.button {

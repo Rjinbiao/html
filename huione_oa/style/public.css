@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family:optima Hylx Fzsx fzqk;
+    font-family: optima Fzsx Hylx fzqk;
     font-size: 1em;
 }
 
@@ -12,17 +12,44 @@
 }
 
 @font-face {
-  font-family: optima;
-  src: url(../fonts/optima-regular-1.ttf);
-  font-weight: normal;
+    font-family: optima;
+    src: url(../fonts/optima-regular-1.ttf);
+    font-weight: normal;
 }
+
 @font-face {
-  font-family: Fzsx;
-  src: url(../fonts/Fzsx.ttf);
+    font-family: Fzsx;
+    src: url(../fonts/Fzsx.ttf);
 }
+
 @font-face {
-  font-family: Hylx;
-  src: url(../fonts/Hylx.ttf);
+    font-family: Hylx;
+    src: url(../fonts/Hylx.ttf);
+}
+
+@font-face {
+    font-family: Futura;
+    src: url(../fonts/Futura.ttc);
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 812339 */
+    src: url(../fonts/iconfont.ttf);
+    src: url('//at.alicdn.com/t/font_812339_x7hfbdkwemg.eot');
+    src: url('//at.alicdn.com/t/font_812339_x7hfbdkwemg.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_812339_x7hfbdkwemg.woff') format('woff'),
+    url('//at.alicdn.com/t/font_812339_x7hfbdkwemg.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_812339_x7hfbdkwemg.svg#iconfont') format('svg');
+  }
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    color: red;
 }
 
 .fl {
@@ -35,6 +62,8 @@
 
 .clear {
     clear: both;
+    margin: 0;
+    padding: 0;
 }
 
 li {
@@ -42,9 +71,10 @@ li {
 }
 
 a {
+    display: inline-block;
     text-decoration: none;
 }
-a:active {
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15),
-    0 1px 2px rgba(0, 0, 0, 0.05);
+
+input {
+    outline: none;
 }

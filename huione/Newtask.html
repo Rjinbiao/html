@@ -31,7 +31,11 @@
         <div class="content">
             <form action="#" enctype="application/x-www-form-urlencoded" method="post" required>
                 <div class="task_type sele">
-                    <span><label for="">任务类型<i>*</i></label></span>
+                    <span>
+                        <label for="">任务类型
+                            <i>*</i>
+                        </label>
+                    </span>
                     <select>
                         <option value="volvo">Volvo</option>
                         <option value="saab">Saab</option>
@@ -40,24 +44,61 @@
                     </select>
                 </div>
                 <div class="task_name sele">
-                    <span><label for="">任务名称<i>*</i></label></span>
+                    <span>
+                        <label for="">任务名称
+                            <i>*</i>
+                        </label>
+                    </span>
                     <input type="text" name="task_name" id="task_name" autocomplete="on" required>
                 </div>
                 <div class="release sele">
-                    <span><label for="">发布日期<i>*</i></label></span>
-                    <input type="date" name="release" id="release" required>
+                    <span>
+                        <label for="">发布日期
+                            <i>*</i>
+                        </label>
+                    </span>
+                    <input type="text" name="release" id="release" autocomplete="off" placeholder="创建时间">
+                    <script src="js/laydate/laydate.js"></script>
+                    <!-- 改成你的路径 -->
+                    <script>
+                        lay('#version').html('-v' + laydate.v);
+                        //执行一个laydate实例
+                        laydate.render({
+                            elem: '#release' //指定元素
+                        });
+                    </script>
                 </div>
                 <div class="pone_number sele">
-                    <span><label for="">责任人<i>*</i></label></span>
+                    <span>
+                        <label for="">责任人
+                            <i>*</i>
+                        </label>
+                    </span>
                     <input type="text" name="pone_number" id="pone_number" autocomplete="on" required>
                 </div>
                 <div class="deadline sele">
-                    <span><label for="">完成日期<i>*</i></label></span>
-                    <input type="date" name="deadline" id="deadline" required>
+                    <span>
+                        <label for="">完成日期
+                            <i>*</i>
+                        </label>
+                    </span>
+                    <input type="text" name="deadline" id="deadline" required>
+                    <script>
+                            lay('#version').html('-v' + laydate.v);
+                            //执行一个laydate实例
+                            laydate.render({
+                                elem: '#deadline' //指定元素
+                            });
+                        </script>
                 </div>
                 <div class="password sele">
-                    <span><label for="">任务描述<i>*</i></label></span>
-                    <input type="text" name="password" id="password" required>
+                    <span>
+                        <label for="">任务描述
+                            <i>*</i>
+                        </label>
+                    </span>
+                    <!-- <input type="text" name="password" id="password" required> -->
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
                 <div class="button">
                     <button type="submit" name="modify_info" id="modify_info">发布</button>
