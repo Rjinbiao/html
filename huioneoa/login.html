@@ -11,82 +11,71 @@
     <!--[if lt IE 9]>
     <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
     <![endif]-->
-    <link rel="stylesheet" href="style/login.css">
     <link rel="stylesheet" href="style/public.css">
+    <link rel="stylesheet" href="style/login.css">
     <link rel="stylesheet" href="build/css/intlTelInput.css">
-    <script src="js/iconfont.js"></script>
+    <script type="application/javascript">
+        window.onload = function () {
+            var oA1 = document.getElementById('sao');
+            var oA2 = document.getElementById('zhang');
+            var oFrom = document.getElementById('login');
+            var oDiv = document.getElementById('qr_code');
+
+            oA1.onclick=function() {
+                oA1.style['display'] = 'none';
+                oA2.style['display'] = 'block';
+                oFrom.style['display'] = 'none';
+                oDiv.style['display'] = 'block';
+            }
+            oA2.onclick=function() {
+                oA1.style['display'] = 'block';
+                oA2.style['display'] = 'none';
+                oFrom.style['display'] = 'block';
+                oDiv.style['display'] = 'none';
+            }
+            
+        }
+    </script>
 </head>
 
 <body>
-    <div class="bg1"></div>
     <div class="bg"></div>
-    <div class="login">
+    <div class="bg2"></div>
+    <div class="myform">
         <div class="logo"></div>
-        <div class="from">
-            <h3>登录
-                <span>Log&nbsp;in</span>
-            </h3>
-            <a onclick="onclicka1()" id="a1">
-                <img id="zhanghu" src="images/zhanghu.svg">
-                <img id="zhe" src="images/erweima.svg">
-            </a>
-            <a onclick="onclicka2()" id="a2">
-                <img id="saoma" src="images/saoma.svg">
-                <img id="zhe" src="images/erweima.svg">
-            </a>
-            <form action="#" method="post" id="myform">
-                <label for="account">账户&nbsp;
-                    <span>Account</span>
-                </label>
-                <input type="tel" name="demo" id="demo" maxlength="11" onkeyup="value=value.replace(/[^\d]/g,'')" required placeholder="使用您的Huione Pay账户登录"
-                    style="font-family: Futura;">
-                <br>
-                <label for="password">密码&nbsp;
-                    <span>Password</span>
-                </label>
-                <input type="password" name="password" id="password" minlength="6" required placeholder="请输入您的密码" style="font-family: Futura;">
-                <br>
-                <input type="submit" value="登录&nbsp;login">
-                <a href="#" class="fr">忘记密码？</a>
-            </form>
-
-            <div class="qr_code" id="erweima">
-                <img id="qr_code" src="images/liantu.png" alt="等待刷新二维码">
-                <h2>使用Huione Pay扫描二维码</h2>
-                <p>Scan QR code with Huione Pay</p>
-            </div>
-
+        <header>
+            <h2>登录<span>Log&nbsp;In</span></h2>
+            <a id="sao" onclick="ofsfi()"><img class="zhanghao" src="images/qr.svg"><img class="erweima" src="images/erweima.svg"><i
+                    class="icon iconfont">&#xe7dd;</i></a>
+            <a id="zhang" href="#"><img class="qr" src="images/zhanghao.svg"><img class="erweima" src="images/erweima.svg"><i
+                    class="icon iconfont">&#xe70f;</i></a>
+        </header>
+        <form action="#" method="post" id="login" name="login">
+            <label for="account">账户<span>Account</span></label>
+            <input type="text" name="account" id="accound" placeholder="使用您的Huione Pay账户登录" maxlength="11" required>
+            <label for="password">密码<span>Password</span></label>
+            <input type="password" name="password" id="password" placeholder="请输入您的密码" minlength="6" required>
+            <input type="submit" value="登录">
+            <a href="#">忘记密码?</a>
+            <!-- Load jQuery from CDN so can run demo immediately -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="build/js/intlTelInput.js"></script>
             <script>
-                var oA1 = document.getElementById('a1');
-                var oA2 = document.getElementById('a2');
-                var oForm = document.getElementById('myform');
-                var oDiv = document.getElementById('erweima');
-
-                function onclicka1() {
-                    oA1.style.display='none';
-                    oForm.style.display='none';
-                    oA2.style.display='block';
-                    oDiv.style.display='block';
-                }
-                function onclicka2() {
-                    oA1.style.display='block';
-                    oForm.style.display='block';
-                    oA2.style.display='none';
-                    oDiv.style.display='none';
-                }
+                $("#accound").intlTelInput({
+                    excludeCountries: ["kh"],
+                    onlyCountries: ['cn', 'kh', 'ch', 'ca', 'do'],
+                    separateDialCode: true,
+                    utilsScript: "build/js/utils.js"
+                });
             </script>
+        </form>
+        <div id="qr_code">
+            <img src="images/liantu.png" alt="二维码刷新错误">
+            <p>使用Huione Pay扫码登录</p>
+            <span>Login with Huione Pay scan code</span>
         </div>
     </div>
-    <!-- Load jQuery from CDN so can run demo immediately -->
-    <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
-    <script src="build/js/intlTelInput.js"></script>
-    <script>
-        $("#demo").intlTelInput({
-            initialCountry: "kh",
-            onlyCountries: ['cn', 'kh'],
-            utilsScript: "build/js/utils.js"
-        });
-    </script>
+
 </body>
 
 </html>
