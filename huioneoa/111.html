@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,Chrome=1">
+    <meta name="keywords" content=" ">
+    <meta name="description" content="your description">
+    <link rel="shortcut icon" type="image/x-icon" href="logo_success.png">
+    <script
+  src="https://code.jquery.com/jquery-1.11.2.js"
+  integrity="sha256-WMJwNbei5YnfOX5dfgVCS5C4waqvc+/0fV7W2uy3DyU="
+  crossorigin="anonymous"></script>
+    <!-- ico图片 -->
+    <!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <ul class="list-side">
+        　　<li><a target="a.html">about</a></li>
+        　　<li><a target="b.html">news</a></li>
+        　　<li><a target="c.html">product</a></li>
+        　　<li><a href="http://ucmic.blogspot.com/" target="_blank">contact</a></li>
+    </ul>
+
+    <div id="iframe" style="width: 100px;height: 100px;border: 1px solid red;">
+        　　
+        <!--jquery 插入html 位址-->
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+                $.get("https://www.google.com.hk/", function (data) { //初始將a.html include div#iframe
+                    $("#iframe").html(data);
+                });
+                $(function () {
+                    $('.list-side li').click(function () {
+                        // 找出 li 中的超链接 href(#id)
+                        var $this = $(this),
+                            _clickTab = $this.find('a').attr('target'); // 找到链接a中的targer的值
+                        $.get(_clickTab, function (data) {
+                            $("#iframe").html(data);
+                        });
+                    });
+                });
+    });
+</script>
+
+</html>

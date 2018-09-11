@@ -9,21 +9,262 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge,Chrome=1">
     <link rel="shortcut icon" type="image/x-icon" href="logo_success.png">
     <!-- ico图片 -->
-    <!-- <link rel="stylesheet" href="style/style.css"> -->
     <!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
     <![endif]-->
     <!--[if lt IE 9]>
     <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/public.css">
-    <script src="js/iconfont.js"></script>    
+    <link rel="stylesheet" href="style/iconfont.css">
+    <!-- <script src="https://code.jquery.com/jquery-1.11.3.js"></script>-->
+    <script src="js/jQuery_3.3.1.js"></script>
+    <script src="js/iconfont.js"></script>
+
 </head>
 
 <body>
-    
+    <header>
+        <a class="logo" href="index.html"></a>
+        <a id="mini" href="#"></a>
+        <div class="fr header_right">
+            <form action="#" method="get" class="fl" id="my_search">
+                <input type="search" name="search" id="search" placeholder="搜索" autocomplete="off">
+                <input type="submit" value="">
+            </form>
+            <a id="search_icon">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-search"></use>
+                </svg>
+            </a>
+            <a class="news" href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-bell"></use>
+                </svg>
+            </a>
+            <a class="task" href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-file-text"></use>
+                </svg>
+            </a>
+            <a class="setting" href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-setting"></use>
+                </svg>
+            </a>
+            <a id="to_big" href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-fullscreen"></use>
+                </svg>
+            </a>
+            <a id="to_small" href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-fullscreen-exit"></use>
+                </svg>
+            </a>
+        </div>
+    </header>
+    <div class="nav">
+        <div class="nav-top">
+            <div id="mini"><img src="images/nav_icon.svg"></div>
+        </div>
+        <ul>
+            <li class="nav-item">
+                <a href="index.html" target=""><i class="icon iconfont icon-airplay"></i><span>网站配置</span><i class="my-icon nav-more"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;"><i class="icon iconfont icon-clock"></i><span>文章管理</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a href="javascript:;"><span>站内新闻</span></a></li>
+                    <li><a href="javascript:;"><span>站内公告</span></a></li>
+                    <li><a href="javascript:;"><span>登录日志</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;"><i class="icon iconfont icon-airplay"></i><span>订单管理</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a href="javascript:;"><span>订单列表</span></a></li>
+                    <li><a href="javascript:;"><span>打个酱油</span></a></li>
+                    <li><a href="javascript:;"><span>也打酱油</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;"><i class="icon iconfont icon-airplay"></i><span>订单管理</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a href="javascript:;"><span>订单列表</span></a></li>
+                    <li><a href="javascript:;"><span>打个酱油</span></a></li>
+                    <li><a href="javascript:;"><span>也打酱油</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;"><i class="icon iconfont icon-airplay"></i><span>订单管理</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a href="javascript:;"><span>订单列表</span></a></li>
+                    <li><a href="javascript:;"><span>打个酱油</span></a></li>
+                    <li><a href="javascript:;"><span>也打酱油</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;"><i class="icon iconfont icon-airplay"></i><span>订单管理</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a href="javascript:;"><span>订单列表</span></a></li>
+                    <li><a href="javascript:;"><span>打个酱油</span></a></li>
+                    <li><a href="javascript:;"><span>也打酱油</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:;"><i class="icon iconfont icon-airplay"></i><span>订单管理</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a href="javascript:;"><span>订单列表</span></a></li>
+                    <li><a href="javascript:;"><span>打个酱油</span></a></li>
+                    <li><a href="javascript:;"><span>也打酱油</span></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function () {
+            // nav收缩展开
+            $('.nav-item>a').on('click', function () {
+                if (!$('.nav').hasClass('nav-mini')) {
+                    if ($(this).next().css('display') == "none") {
+                        //展开未展开
+                        $('.nav-item').children('ul').slideUp(300);
+                        $(this).next('ul').slideDown(300);
+                        $(this).parent('li').addClass('nav-show').siblings('li').removeClass('nav-show');
+                    } else {
+                        //收缩已展开
+                        $(this).next('ul').slideUp(300);
+                        $('.nav-item.nav-show').removeClass('nav-show');
+                    }
+                }
+            });
+            //nav-mini切换
+            $('#mini').on('click', function () {
+                if (!$('.nav').hasClass('nav-mini')) {
+                    $('.nav-item.nav-show').removeClass('nav-show');
+                    $('.nav-item').children('ul').removeAttr('style');
+                    $('.nav').addClass('nav-mini');
+                } else {
+                    $('.nav').removeClass('nav-mini');
+                }
+            });
+        });
+    </script>
+    <div class="content">
+        <div class="nav">
+
+        </div>
+        <div id="content">
+            <iframe src="login.html" frameborder="0" width="100%" height="100%" id="myiframe"></iframe>
+        </div>
+    </div>
 </body>
+<script>
+    /* 调用示例 */
+    // 窗口全屏
+    $('#to_big').on('click', function () {
+        requestFullScreen(document.documentElement);
+    });
+
+
+    // // div全屏
+    // $('.div-fullscreen').on('click', function () {
+    //     requestFullScreen($('.div')[0]);
+    // });
+
+    // // img全屏
+    // $('.img-fullscreen').on('click', function () {
+    //     requestFullScreen($('.img')[0]);
+    // });
+
+    // 退出全屏
+    $('#to_small').on('click', function () {
+        exitFull();
+    });
+
+    // 窗口状态改变事件
+    fullscreenchange(document, function (isFull) {
+        console.log(isFull);
+    });
+
+    /* 封装 */
+    // 窗口状态改变
+    function fullscreenchange(el, callback) {
+        el.addEventListener("fullscreenchange", function () {
+            callback && callback(document.fullscreen);
+        });
+        el.addEventListener("webkitfullscreenchange", function () {
+            callback && callback(document.webkitIsFullScreen);
+        });
+        el.addEventListener("mozfullscreenchange", function () {
+            callback && callback(document.mozFullScreen);
+        });
+        el.addEventListener("msfullscreenchange", function () {
+            callback && callback(document.msFullscreenElement);
+        });
+    }
+
+    // 全屏
+    function requestFullScreen(element) {
+        var requestMethod = element.requestFullScreen || //W3C
+            element.webkitRequestFullScreen || //Chrome等
+            element.mozRequestFullScreen || //FireFox
+            element.msRequestFullScreen; //IE11
+        if (requestMethod) {
+            requestMethod.call(element);
+        } else if (typeof window.ActiveXObject !== "undefined") { //for Internet Explorer
+            var wscript = new ActiveXObject("WScript.Shell");
+            if (wscript !== null) {
+                wscript.SendKeys("{F11}");
+            }
+        }
+    }
+
+    //退出全屏
+    function exitFull() {
+        var exitMethod = document.exitFullscreen || //W3C
+            document.mozCancelFullScreen || //Chrome等
+            document.webkitExitFullscreen || //FireFox
+            document.webkitExitFullscreen; //IE11
+        if (exitMethod) {
+            exitMethod.call(document);
+        } else if (typeof window.ActiveXObject !== "undefined") { //for Internet Explorer
+            var wscript = new ActiveXObject("WScript.Shell");
+            if (wscript !== null) {
+                wscript.SendKeys("{F11}");
+            }
+        }
+    }
+    window.onload = function () {
+        var oFr = document.getElementById('my_search');
+        var aA = document.getElementById('search_icon');
+        var oInput = document.getElementById('search');
+
+        aA.onclick = function () {
+            oFr.style.display = 'block';
+            aA.style.display = 'none';
+            oInput.focus();
+        }
+        oInput.onblur = function () {
+            oFr.style.display = 'none';
+            aA.style.display = 'block';
+        }
+
+        var aA1 = document.getElementById('to_big');
+        var aA2 = document.getElementById('to_small');
+
+        aA1.onclick = function () {
+            aA1.style['display'] = 'none';
+            aA2.style['display'] = 'block';
+        }
+        aA2.onclick = function () {
+            aA1.style['display'] = 'block';
+            aA2.style['display'] = 'none';
+        }
+    }
+</script>
 
 </html>

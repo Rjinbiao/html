@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Huione OA</title>
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge,Chrome=1">
-    <link rel="shortcut icon" type="image/x-icon" href="logo_success.png">
-    <!-- ico图片 -->
-    <!-- <link rel="stylesheet" href="style/style.css"> -->
-    <!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
-    <!--[if lt IE 9]>
-    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
-    <![endif]-->
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="style/public.css">
-
+    <title>load_method</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <style>
+        *{margin: 0;padding: 0}
+        html, body{height: 100%}
+        #nav{float: left;width:5%;height:100%;background-color: antiquewhite}
+        #con{float: right;width: 95%;height:100%;background-color: aqua}
+    </style>
+    <script>
+        $(document).ready(function(){
+            //页面加载的时候，内容框默认显示 a.html
+            $('#con').load('aa.html');
+            //单击 a 链接，加载 a.html
+            $("#a1").click(function(){
+                $('#con').load('a.html');
+            });
+            //单击 b 链接，加载 b.html
+            $("#a2").click(function(){
+                $('#con').load('b.html');
+            });
+        })
+    </script>
 </head>
-
 <body>
-    <header>
-            <i class="iconfont" style="color:red;">&#xe637;</i>
-            <p class="iconfont">&#xe61e;</p>
-            <a href="login.html">000</a>
-            sda
-    </header>
+<ul id="nav">
+    <li><a href="#" id="a1">show a</a></li>
+    <li><a href="#" id="a2">show b</a></li>
+</ul>
+<div id="con"></div>
 </body>
-
 </html>
